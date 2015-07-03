@@ -87,3 +87,10 @@ body {
     border-bottom: 0;
   }
 }
+body{
+  background-image:url('http://www.boredpanda.com/blog/wp-content/themes/boredpanda/images/404-image.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  margin:300px;
+  background-color:gray;
+}
