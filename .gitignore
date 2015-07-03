@@ -1,6 +1,0 @@
-.bowerrc
-.editorconfig
-.yo-rc.json
-node_modules/
-bower_components/
-.gitattributes
