@@ -90,7 +90,10 @@ body {
 body{
   background-image:url('http://www.boredpanda.com/blog/wp-content/themes/boredpanda/images/404-image.png');
   background-repeat:no-repeat;
-  background-position:center;
-  margin:300px;
+  background-position:275px 100px;
   background-color:gray;
+}
+h1{
+  text-align:center;
+  color:white;
 }
