@@ -7,7 +7,12 @@ import {stream as wiredep} from 'wiredep';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
-
+var gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
+gulp.task('deploy', function(){
+  return gulp.src('./dis/**/*')
+  .pipe(ghPages());
+});
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.css')
     .pipe($.sourcemaps.init())
