@@ -87,3 +87,22 @@ body {
     border-bottom: 0;
   }
 }
+header{
+  text-align:center;
+}
+.img{
+  float:left;
+}
+.text{
+  border:1px solid green;
+  float:left;
+  margin:7em ;
+}
+footer{
+  clear:left;
+  text-align:center;
+}
+footer > ul > li{
+  list-style-type:none;
+  display:inline;
+}
