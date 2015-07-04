@@ -88,20 +88,30 @@ body {
     border-bottom: 0;
   }
 }
-
- body{
+header{
   font-family:'Rock Salt';
-}
-
- header{
   text-align:center;
+  margin-right:100pt;
 }
-
-footer > ul > li{
+.text{
+  margin-top:100pt;
+  font-size:1.5em;
+  font-family:monospace;
+}
+footer{
+  text-align:center;
+  font-family:'rock salt';
+}
+footer>ul>li{
   list-style-type:none;
   display:inline;
+  padding:1.5em;
 }
 a{
-  color:gray;
-  text-decoration:none;
+  color:gray !important;
+}
+a:hover{
+  color:darkgray !important;
+  text-decoration:none !important;
+
 }
