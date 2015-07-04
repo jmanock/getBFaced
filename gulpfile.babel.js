@@ -8,6 +8,11 @@ import {stream as wiredep} from 'wiredep';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
+gulp.task('deploy', ['build'],function(){
+  return gulp.src('dist')
+  .pipe($.subtree())
+  .pipe($.clean());
+});
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.css')
     .pipe($.sourcemaps.init())
