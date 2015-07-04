@@ -89,21 +89,21 @@ body {
   }
 }
 
-body{
+ body{
   font-family:'Rock Salt';
 }
 
 header{
   text-align:center;
-  font-size:2em;
 }
 .img{
   float:left;
 }
 .text{
-  border:1px solid green;
+  font-family:sans-serif;
+  font-size:1.3em;
   float:left;
-  
+  padding-top:4em;
 }
 footer{
   clear:left;
@@ -112,4 +112,8 @@ footer{
 footer > ul > li{
   list-style-type:none;
   display:inline;
+}
+a{
+  color:gray;
+  text-decoration:none;
 }
