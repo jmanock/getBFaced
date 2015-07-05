@@ -11,12 +11,16 @@
   font-family:'Walter Turncoat';
 }
 li > a{
-  color:black !important;
+  color:purple !important;
   font-size:1.5em;
 }
 footer{
   text-align:center;
 }
 .active > a{
-  background-color:orange !important;
+  background-color:lightgray !important;
+  color:black !important;
+}
+a:hover{
+  color:orange !important;
 }
