@@ -1,6 +1,19 @@
-body{
-  
+@import url(http://fonts.googleapis.com/css?family=Courgette);
+@import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
+.navbar-brand{
+  text-decoration:underline;
+  color:teal !important;
+  font-weight:bold !important;
+  font-size:2em !important;
 }
 .navbar{
-  background-color:lightgray !important;
+  background-color:gray !important;
+  font-family:'Walter Turncoat';
+}
+li > a{
+  color:black !important;
+  font-size:1.5em;
+}
+footer{
+  text-align:center;
 }
