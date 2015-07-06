@@ -5,5 +5,6 @@ $(document).ready(function(){
   $('li a').on('click', function(){
     $('section').hide();
     $(this.getAttribute('href')).show();
+    console.log('is this click showing up?? ' + this);
   });
 });
