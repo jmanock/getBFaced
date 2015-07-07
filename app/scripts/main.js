@@ -71,7 +71,43 @@ $(document).ready(function(){
     ~ put them all together
     ~ change them with a swipe or arrow button
     */
-    
+    var data ={
+     images:[
+      {
+        'img':'images/1.jpg'
+      },
+      {
+        'img':'images/2.jpg'
+      },
+      {
+        'img':'images/3.jpg'
+      },
+      {
+        'img':'images/4.jpg'
+      },
+      {
+        'img':'images/5.jpg'
+      },
+      {
+        'img':'images/6.jpg'
+      },
+      {
+        'img':'images/7.jpg'
+      },
+      {
+        'img':'images/8.jpg'
+      },
+      {
+        'img':'images/9.jpg'
+      },
+      {
+        'img':'images/10.jpg'
+      }
+    ]
+  };
+    $.each(data.images, function(key, value){
+      $('#beautie').append('<img src='+ value.img + ' width=100 height=100></img>');
+    });
 
   };
 
