@@ -8,7 +8,7 @@ $(document).ready(function(){
   $('li a').on('click', function(){
     $('section').hide();
     $(this.getAttribute('href')).show();
-
+    console.log(this.text);
     var x = this.text;
     switch(x){
       case 'About': About(this);
@@ -18,6 +18,9 @@ $(document).ready(function(){
       break;
 
       case 'Resume': Resume(this);
+      break;
+
+      case 'Portfolio': console.log('is this shit working?????');
       break;
 
       case 'Beautie': Beautie(this);
@@ -64,6 +67,11 @@ $(document).ready(function(){
     console.log('this is the contact section');
   };
 
+  Portfolio = function(x){
+    console.log('this is portfolio, something should show here');
+    $('<h1>Hello</h1>').appendTo('body');
+  };
+
   Beautie = function(x){
     console.log('this is the beautie section');
     /*
@@ -80,6 +88,15 @@ $(document).ready(function(){
 
   Editorial = function(x){
     console.log('this is the editorial section');
+
+    $.each(data.images, function(k,v){
+      console.log(k,v.img);
+      // This works just have to change the numbers somehow maybe a switch statment
+      // if(v.img ==='images/1.jpg'){
+      //   v.img = 'butthole/1.jpg';
+      //   $('#editorial').append('<img src=' + v.img + '></img>');
+      // }
+    });
   };
 
   Fantasy = function(x){
