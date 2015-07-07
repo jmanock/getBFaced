@@ -67,44 +67,11 @@ $(document).ready(function(){
   Beautie = function(x){
     console.log('this is the beautie section');
     /*
-    ~ get all the images onto the page
-    ~ put them all together
     ~ change them with a swipe or arrow button
+    ~ way to change between other sub folders?
     */
-    var data ={
-     images:[
-      {
-        'img':'images/1.jpg'
-      },
-      {
-        'img':'images/2.jpg'
-      },
-      {
-        'img':'images/3.jpg'
-      },
-      {
-        'img':'images/4.jpg'
-      },
-      {
-        'img':'images/5.jpg'
-      },
-      {
-        'img':'images/6.jpg'
-      },
-      {
-        'img':'images/7.jpg'
-      },
-      {
-        'img':'images/8.jpg'
-      },
-      {
-        'img':'images/9.jpg'
-      },
-      {
-        'img':'images/10.jpg'
-      }
-    ]
-  };
+    $('img').remove();
+
     $.each(data.images, function(key, value){
       $('#beautie').append('<img src='+ value.img + ' width=100 height=100></img>');
     });
@@ -143,3 +110,37 @@ $(document).ready(function(){
     console.log('this is the nailArt section');
   };
 });
+var data ={
+ images:[
+  {
+    'img':'images/1.jpg'
+  },
+  {
+    'img':'images/2.jpg'
+  },
+  {
+    'img':'images/3.jpg'
+  },
+  {
+    'img':'images/4.jpg'
+  },
+  {
+    'img':'images/5.jpg'
+  },
+  {
+    'img':'images/6.jpg'
+  },
+  {
+    'img':'images/7.jpg'
+  },
+  {
+    'img':'images/8.jpg'
+  },
+  {
+    'img':'images/9.jpg'
+  },
+  {
+    'img':'images/10.jpg'
+  }
+]
+};
