@@ -66,6 +66,13 @@ $(document).ready(function(){
 
   Beautie = function(x){
     console.log('this is the beautie section');
+    /*
+    ~ get all the images onto the page
+    ~ put them all together
+    ~ change them with a swipe or arrow button
+    */
+    
+
   };
 
   Editorial = function(x){
