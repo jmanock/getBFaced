@@ -22,5 +22,8 @@ footer{
   color:black !important;
 }
 a:hover{
-  color:orange !important;
+  text-decoration:underline !important;
+}
+.icon-bar{
+  background-color:teal !important;
 }

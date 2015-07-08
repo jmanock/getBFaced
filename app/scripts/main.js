@@ -8,21 +8,9 @@ $(document).ready(function(){
   $('li a').on('click', function(){
     $('section').hide();
     $(this.getAttribute('href')).show();
-    console.log(this.text);
+
     var x = this.text;
     switch(x){
-      case 'About': About(this);
-      break;
-
-      case 'Contact': Contact(this);
-      break;
-
-      case 'Resume': Resume(this);
-      break;
-
-      case 'Portfolio': console.log('is this shit working?????');
-      break;
-
       case 'Beautie': Beautie(this);
       break;
 
@@ -32,7 +20,7 @@ $(document).ready(function(){
       case 'Fantasy': Fantasy(this);
       break;
 
-      case 'Special': Special(this);
+      case 'Special Fx': Special(this);
       break;
 
       case 'Womens': Womens(this);
@@ -54,110 +42,180 @@ $(document).ready(function(){
 
   });
 
-  // Thinking of ways to make the files in jQuery not HTML
-  About = function(x){
-    console.log('this is the about section');
-  };
-
-  Resume = function(x){
-    console.log('this is the resume section');
-  };
-
-  Contact = function(x){
-    console.log('this is the contact section');
-  };
-
-  Portfolio = function(x){
-    console.log('this is portfolio, something should show here');
-    $('<h1>Hello</h1>').appendTo('body');
-  };
-
   Beautie = function(x){
-    console.log('this is the beautie section');
-    /*
-    ~ change them with a swipe or arrow button
-    ~ way to change between other sub folders?
-    */
     $('img').remove();
-
     $.each(data.images, function(key, value){
-      $('#beautie').append('<img src='+ value.img + ' width=100 height=100></img>');
+      $('#beautie').append('<img src=' + value.beautie + '></img>');
     });
-
   };
 
   Editorial = function(x){
-    console.log('this is the editorial section');
-
-    $.each(data.images, function(k,v){
-      console.log(k,v.img);
-      // This works just have to change the numbers somehow maybe a switch statment
-      // if(v.img ==='images/1.jpg'){
-      //   v.img = 'butthole/1.jpg';
-      //   $('#editorial').append('<img src=' + v.img + '></img>');
-      // }
+    $('img').remove();
+    $.each(data.images, function(key, value){
+      $('#editorial').append('<img src=' + value.editorial + '></img>');
     });
   };
 
   Fantasy = function(x){
-    console.log('this is the fantasy section');
+    $('img').remove();
+    $.each(data.images, function(key, value){
+      $('#fantasy').append('<img src=' + value.fantasy +'></img>');
+    });
   };
 
   Special = function(x){
-    console.log('this is the special section');
+    $('img').remove();
+    $.each(data.images, function(key, value){
+      $('#special').append('<img src=' + value.special +'></img>');
+    });
   };
 
   Womens = function(x){
-    console.log('this is the womens section');
+    $('img').remove();
+    $.each(data.images, function(key, value){
+      $('#womens').append('<img src=' + value.womens + '></img>');
+    });
   };
 
   Mens = function(x){
-    console.log('this is the mens section');
+    $('img').remove();
+    $.each(data.images, function(key, value){
+      $('#mens').append('<img src=' +value.mens + '></img>');
+    });
   };
 
   Mani = function(x){
-    console.log('this is the Mani/Pedi section');
+    $('img').remove();
+    $.each(data.images, function(key, value){
+      $('#mani').append('<img src=' + value.mani + '></img>');
+    });
   };
 
   Acrylic = function(x){
-    console.log('this is the Acrylic section');
+    $('img').remove();
+    $.each(data.images, function(key, value){
+      $('#acrylic').append('<img src=' + value.acrylic + '></img>');
+    });
   };
 
   NailArt = function(x){
-    console.log('this is the nailArt section');
+    $('img').remove();
+    $.each(data.images, function(key, value){
+      $('#nailArt').append('<img src=' + value.nailArt + '></img>');
+    });
   };
 });
 var data ={
  images:[
   {
-    'img':'images/1.jpg'
+    'beautie':'images/beautie/1.jpg',
+    'editorial': 'images/editorial/1.jpg',
+    'fantasy': 'images/fantasy/1.jpg',
+    'special': 'images/special/1.jpg',
+    'womens': 'images/womens/1.jpg',
+    'mens': 'images/mens/1.jpg',
+    'mani':'images/mani/1.jpg',
+    'acrylic': 'images/acrylic/1.jpg',
+    'nailArt': 'images/nailArt/1.jpg'
   },
   {
-    'img':'images/2.jpg'
+    'beautie':'images/beautie/2.jpg',
+    'editorial': 'images/editorial/2.jpg',
+    'fantasy': 'images/fantasy/2.jpg',
+    'special': 'images/special/2.jpg',
+    'womens': 'images/womens/2.jpg',
+    'mens': 'images/mens/2.jpg',
+    'mani':'images/mani/2.jpg',
+    'acrylic': 'images/acrylic/2.jpg',
+    'nailArt': 'images/nailArt/2.jpg'
   },
   {
-    'img':'images/3.jpg'
+    'beautie':'images/beautie/3.jpg',
+    'editorial': 'images/editorial/3.jpg',
+    'fantasy': 'images/fantasy/3.jpg',
+    'special': 'images/special/3.jpg',
+    'womens': 'images/womens/3.jpg',
+    'mens': 'images/mens/3.jpg',
+    'mani':'images/mani/3.jpg',
+    'acrylic': 'images/acrylic/3.jpg',
+    'nailArt': 'images/nailArt/3.jpg'
   },
   {
-    'img':'images/4.jpg'
+    'beautie':'images/beautie/4.jpg',
+    'editorial': 'images/editorial/4.jpg',
+    'fantasy': 'images/fantasy/4.jpg',
+    'special': 'images/special/4.jpg',
+    'womens': 'images/womens/4.jpg',
+    'mens': 'images/mens/4.jpg',
+    'mani':'images/mani/4.jpg',
+    'acrylic': 'images/acrylic/4.jpg',
+    'nailArt': 'images/nailArt/4.jpg'
   },
   {
-    'img':'images/5.jpg'
+    'beautie':'images/beautie/5.jpg',
+    'editorial': 'images/editorial/5.jpg',
+    'fantasy': 'images/fantasy/5.jpg',
+    'special': 'images/special/5.jpg',
+    'womens': 'images/womens/5.jpg',
+    'mens': 'images/mens/5.jpg',
+    'mani':'images/mani/5.jpg',
+    'acrylic': 'images/acrylic/5.jpg',
+    'nailArt': 'images/nailArt/5.jpg'
   },
   {
-    'img':'images/6.jpg'
+    'beautie':'images/beautie/6.jpg',
+    'editorial': 'images/editorial/6.jpg',
+    'fantasy': 'images/fantasy/6.jpg',
+    'special': 'images/special/6.jpg',
+    'womens': 'images/womens/6.jpg',
+    'mens': 'images/mens/6.jpg',
+    'mani':'images/mani/6.jpg',
+    'acrylic': 'images/acrylic/6.jpg',
+    'nailArt': 'images/nailArt/6.jpg'
   },
   {
-    'img':'images/7.jpg'
+    'beautie':'images/beautie/7.jpg',
+    'editorial': 'images/editorial/7.jpg',
+    'fantasy': 'images/fantasy/7.jpg',
+    'special': 'images/special/7.jpg',
+    'womens': 'images/womens/7.jpg',
+    'mens': 'images/mens/7.jpg',
+    'mani':'images/mani/7.jpg',
+    'acrylic': 'images/acrylic/7.jpg',
+    'nailArt': 'images/nailArt/7.jpg'
   },
   {
-    'img':'images/8.jpg'
+    'beautie':'images/beautie/8.jpg',
+    'editorial': 'images/editorial/8.jpg',
+    'fantasy': 'images/fantasy/8.jpg',
+    'special': 'images/special/8.jpg',
+    'womens': 'images/womens/8.jpg',
+    'mens': 'images/mens/8.jpg',
+    'mani':'images/mani/8.jpg',
+    'acrylic': 'images/acrylic/8.jpg',
+    'nailArt': 'images/nailArt/8.jpg'
   },
   {
-    'img':'images/9.jpg'
+    'beautie':'images/beautie/9.jpg',
+    'editorial': 'images/editorial/9.jpg',
+    'fantasy': 'images/fantasy/9.jpg',
+    'special': 'images/special/9.jpg',
+    'womens': 'images/womens/9.jpg',
+    'mens': 'images/mens/9.jpg',
+    'mani':'images/mani/9.jpg',
+    'acrylic': 'images/acrylic/9.jpg',
+    'nailArt': 'images/nailArt/9.jpg'
   },
   {
-    'img':'images/10.jpg'
+    'beautie':'images/beautie/10.jpg',
+    'editorial': 'images/editorial/10.jpg',
+    'fantasy': 'images/fantasy/10.jpg',
+    'special': 'images/special/10.jpg',
+    'womens': 'images/womens/10.jpg',
+    'mens': 'images/mens/10.jpg',
+    'mani':'images/mani/10.jpg',
+    'acrylic': 'images/acrylic/10.jpg',
+    'nailArt': 'images/nailArt/10.jpg'
   }
 ]
 };
