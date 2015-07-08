@@ -27,3 +27,6 @@ a:hover{
 .icon-bar{
   background-color:teal !important;
 }
+.dropdown-header{
+  color:orange !important;
+}
