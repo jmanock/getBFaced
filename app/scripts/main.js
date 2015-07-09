@@ -9,101 +9,59 @@ $(document).ready(function(){
     $('section').hide();
     $(this.getAttribute('href')).show();
 
+    // Send to pic function
+    // has switch statment
+    //
     var x = this.text;
-    switch(x){
-      case 'Beautie': Beautie(this);
-      break;
-
-      case 'Editorial': Editorial(this);
-      break;
-
-      case 'Fantasy': Fantasy(this);
-      break;
-
-      case 'Special Fx': Special(this);
-      break;
-
-      case 'Womens': Womens(this);
-      break;
-
-      case 'Mens': Mens(this);
-      break;
-
-      case 'Mani/Pedi': Mani(this);
-      break;
-
-      case 'Acrylic': Acrylic(this);
-      break;
-
-      case 'NailArt': NailArt(this);
-      break;
-
-    }
+    if(x === 'Beautie' ||
+       x === 'Editorial' ||
+       x === 'Fantasy' ||
+       x === 'Special Fx' ||
+       x === 'Mens' ||
+       x === 'Womens' ||
+       x ==='Mani/Pedi' ||
+       x === 'Acrylic' ||
+       x === 'NailArt'){
+         Photos(x);
+       }
 
   });
 
+  Photos = function(j){
+    $.each(data.images, function(key, value){
+      switch(j){
+        case 'Beautie': console.log(value.beautie);
+        break;
+        case 'Editorial': console.log(value.editorial);
+        break;
+        case 'Fantasy': console.log(value.fantasy);
+        break;
+        case 'Special Fx': console.log(value.special);
+        break;
+        case 'Mens': console.log(value.mens);
+        break;
+        case 'Womens': console.log(value.womens);
+        break;
+        case 'Mani/Pedi': console.log(value.mani);
+        break;
+        case 'Acrylic': console.log(value.acrylic);
+        break;
+        case 'NailArt': console.log(value.nailArt);
+        break;
+      }
+    });
+  };
   Beautie = function(x){
     $('img').remove();
     $.each(data.images, function(key, value){
-      $('#beautie').append('<img src=' + value.beautie + '></img>');
+      $('#beautie').append('<img src=' + value.beautie + ' height="100" width="100"></img>');
+    });
+    $('img').on('click', function(){
+      $(this).animate({width:'200', height:'200'}, 'slow');
     });
   };
 
-  Editorial = function(x){
-    $('img').remove();
-    $.each(data.images, function(key, value){
-      $('#editorial').append('<img src=' + value.editorial + '></img>');
-    });
-  };
 
-  Fantasy = function(x){
-    $('img').remove();
-    $.each(data.images, function(key, value){
-      $('#fantasy').append('<img src=' + value.fantasy +'></img>');
-    });
-  };
-
-  Special = function(x){
-    $('img').remove();
-    $.each(data.images, function(key, value){
-      $('#special').append('<img src=' + value.special +'></img>');
-    });
-  };
-
-  Womens = function(x){
-    $('img').remove();
-    $.each(data.images, function(key, value){
-      $('#womens').append('<img src=' + value.womens + '></img>');
-    });
-  };
-
-  Mens = function(x){
-    $('img').remove();
-    $.each(data.images, function(key, value){
-      $('#mens').append('<img src=' +value.mens + '></img>');
-    });
-  };
-
-  Mani = function(x){
-    $('img').remove();
-    $.each(data.images, function(key, value){
-      $('#mani').append('<img src=' + value.mani + '></img>');
-    });
-  };
-
-  Acrylic = function(x){
-    $('img').remove();
-    $.each(data.images, function(key, value){
-      $('#acrylic').append('<img src=' + value.acrylic + '></img>');
-    });
-  };
-
-  NailArt = function(x){
-    $('img').remove();
-    $.each(data.images, function(key, value){
-      $('#nailArt').append('<img src=' + value.nailArt + '></img>');
-    });
-  };
 });
 var data ={
  images:[

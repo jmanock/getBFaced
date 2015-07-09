@@ -28,5 +28,12 @@ a:hover{
   background-color:teal !important;
 }
 .dropdown-header{
-  color:orange !important;
+  color:teal !important;
+}
+img{
+  display:inline;
+  padding:10px;
+}
+section{
+  background-color:darkgray !important;
 }
