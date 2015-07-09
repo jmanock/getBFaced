@@ -96,6 +96,7 @@ body section h1{
 form{
   width:59%;
   margin: 0 auto;
+  text-align:center;
 }
 form .field{
   width:100%;
@@ -108,7 +109,7 @@ form .field label{
   top:0;
   left:0;
   color:white;
-  font-family:'Lato', sans-serif;
+  font-family:'Walter Turncoat', sans-serif;
   text-align:center;
   background:#313a3d;
   width:100%;
@@ -185,7 +186,7 @@ form input[type='submit']{
   color:white;
   border:none;
   text-transform:uppercase;
-
+  font-family:'Walter Turncoat';
   padding:14px 50px;
   font-size:1.4em;
   letter-spacing:0.1em;
