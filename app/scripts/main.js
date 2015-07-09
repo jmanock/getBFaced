@@ -6,11 +6,10 @@ $(document).ready(function(){
 
   // Hides/Shows the content
   $('li a').on('click', function(){
+
     $('section').hide();
     $(this.getAttribute('href')).show();
-    // Send to pic function
-    // has switch statment
-    //
+
     var x = this.text;
     if(x === 'Beautie' ||
        x === 'Editorial' ||
@@ -21,7 +20,6 @@ $(document).ready(function(){
        x ==='Mani/Pedi' ||
        x === 'Acrylic' ||
        x === 'NailArt'){
-         $('h3').remove();
          Photos(x);
        }
 
@@ -29,7 +27,6 @@ $(document).ready(function(){
 
   Photos = function(j){
     $('img').remove();
-    $('#photos').append('<h3>' + j + '</h3>');
     $.each(data.images, function(key, value){
       var k;
       switch(j){
@@ -53,19 +50,20 @@ $(document).ready(function(){
         break;
       }
 
-      $('#photos').append('<img src=' + k + '></img>');
-    });
-  };
-  Beautie = function(x){
-    $('img').remove();
-    $.each(data.images, function(key, value){
-      $('#beautie').append('<img src=' + value.beautie + ' height="100" width="100"></img>');
+      $('#photos').append('<img class="small" src=' + k + '></img>');
     });
     $('img').on('click', function(){
-      $(this).animate({width:'200', height:'200'}, 'slow');
+      if($(this).hasClass('small')){
+        $(this).removeClass('small');
+        $(this).addClass('big');
+      }else
+      if($(this).hasClass('big')){
+        $(this).removeClass('big');
+        $(this).addClass('small');
+      }
+
     });
   };
-
 
 });
 var data ={

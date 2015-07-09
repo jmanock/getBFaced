@@ -1,5 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Courgette);
 @import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
+body{
+  background-color:darkgray !important;
+}
 .navbar-brand{
   text-decoration:underline;
   color:teal !important;
@@ -18,8 +21,8 @@ footer{
   text-align:center;
 }
 .active > a{
-  background-color:lightgray !important;
-  color:black !important;
+  text-decoration:underline !important;
+  background-color:gray !important;
 }
 a:hover{
   text-decoration:underline !important;
@@ -39,4 +42,25 @@ section{
 }
 h3{
   text-align:center;
+}
+.dropdown-menu{
+  background-color:gray !important;
+}
+.dropdown-menu > li > a:hover{
+  text-decoration:underline !important;
+  background-color:gray !important;
+}
+span:hover{
+  text-decoration:underline !important;
+}
+button:hover{
+  background-color:gray !important;
+}
+.small{
+  height:100px;
+  width:100px;
+}
+.large{
+  height:200px;
+  width:200px;
 }
