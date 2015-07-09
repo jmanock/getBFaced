@@ -8,7 +8,6 @@ $(document).ready(function(){
   $('li a').on('click', function(){
     $('section').hide();
     $(this.getAttribute('href')).show();
-    $('.photos').remove();
     // Send to pic function
     // has switch statment
     //
@@ -22,6 +21,7 @@ $(document).ready(function(){
        x ==='Mani/Pedi' ||
        x === 'Acrylic' ||
        x === 'NailArt'){
+         $('h3').remove();
          Photos(x);
        }
 
@@ -29,8 +29,7 @@ $(document).ready(function(){
 
   Photos = function(j){
     $('img').remove();
-
-    $('.photos').append(j);
+    $('#photos').append('<h3>' + j + '</h3>');
     $.each(data.images, function(key, value){
       var k;
       switch(j){
