@@ -8,7 +8,7 @@ $(document).ready(function(){
   $('li a').on('click', function(){
     $('section').hide();
     $(this.getAttribute('href')).show();
-
+    $('.photos').remove();
     // Send to pic function
     // has switch statment
     //
@@ -28,27 +28,33 @@ $(document).ready(function(){
   });
 
   Photos = function(j){
+    $('img').remove();
+
+    $('.photos').append(j);
     $.each(data.images, function(key, value){
+      var k;
       switch(j){
-        case 'Beautie': console.log(value.beautie);
+        case 'Beautie': k = value.beautie;
         break;
-        case 'Editorial': console.log(value.editorial);
+        case 'Editorial': k = value.editorial;
         break;
-        case 'Fantasy': console.log(value.fantasy);
+        case 'Fantasy': k = value.fantasy;
         break;
-        case 'Special Fx': console.log(value.special);
+        case 'Special Fx': k = value.special;
         break;
-        case 'Mens': console.log(value.mens);
+        case 'Mens': k = value.mens;
         break;
-        case 'Womens': console.log(value.womens);
+        case 'Womens': k = value.womens;
         break;
-        case 'Mani/Pedi': console.log(value.mani);
+        case 'Mani/Pedi': k = value.mani;
         break;
-        case 'Acrylic': console.log(value.acrylic);
+        case 'Acrylic': k = value.acrylic;
         break;
-        case 'NailArt': console.log(value.nailArt);
+        case 'NailArt': k = value.nailArt;
         break;
       }
+
+      $('#photos').append('<img src=' + k + '></img>');
     });
   };
   Beautie = function(x){
