@@ -107,6 +107,9 @@ form .field label{
   position:absolute;
   top:0;
   left:0;
+  color:white;
+  font-family:'Lato', sans-serif;
+  text-align:center;
   background:#313a3d;
   width:100%;
   padding:18px 0;
@@ -141,7 +144,7 @@ form .field textarea{
 }
 form .field input[type='text']#msg,
 form .field textarea#msg{
-  height:18px;
+  height:63px;
   resize:none;
   transition: all 33ms ease-in-out;
 }
@@ -182,7 +185,7 @@ form input[type='submit']{
   color:white;
   border:none;
   text-transform:uppercase;
-  
+
   padding:14px 50px;
   font-size:1.4em;
   letter-spacing:0.1em;
