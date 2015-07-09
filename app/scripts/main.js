@@ -1,16 +1,20 @@
 $(document).ready(function(){
-  // Handels clicking nav bar links
+  // Changes the class on clicking navbar links
   $('.nav li').on('click',function(){
     $(this).addClass('active').siblings().removeClass('active');
   });
 
-  // Hides/Shows the content
+  // Hides or Shows sections onClick
   $('li a').on('click', function(){
-
-    $('section').hide();
-    $(this.getAttribute('href')).show();
-
     var x = this.text;
+
+    // Shows last section if `Portfolio` is clicked
+    if(x !== 'Portfolio'){
+      $('section').hide();
+      $(this.getAttribute('href')).show();
+    }
+
+    // if statment for sub-category on portfolio
     if(x === 'Beautie' ||
        x === 'Editorial' ||
        x === 'Fantasy' ||
@@ -22,14 +26,14 @@ $(document).ready(function(){
        x === 'NailArt'){
          Photos(x);
        }
+  }); // End `Click` function
 
-  });
-
-  Photos = function(j){
+  // shows phots based on sub-category click
+  Photos = function(x){
     $('img').remove();
     $.each(data.images, function(key, value){
       var k;
-      switch(j){
+      switch(x){
         case 'Beautie': k = value.beautie;
         break;
         case 'Editorial': k = value.editorial;
@@ -63,9 +67,11 @@ $(document).ready(function(){
       }
 
     });
-  };
+  }; // End `Photos` function
 
-});
+}); // End jQuery call
+
+// json for images
 var data ={
  images:[
   {

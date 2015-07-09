@@ -56,6 +56,9 @@ span:hover{
 button:hover{
   background-color:gray !important;
 }
+button{
+  background-color:gray !important;
+}
 .small{
   height:100px;
   width:100px;
