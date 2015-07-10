@@ -191,3 +191,33 @@ form input[type="submit"]:focus {
   outline: none;
   background: #cd6302;
 }
+/* Media Queries*/
+@media screen and (max-width:768px){
+  ::-webkit-input-placeholder{
+    font-size:medium !important;
+  }
+}
+@media screen and (max-width:648px){
+  .field{
+    font-size:x-small !important;
+  }
+  form .field input[type="text"]#msg,
+  form .field textarea#msg{
+    height:56px;
+  }
+  .submit{
+
+  }
+  ::-webkit-input-placeholder{
+    font-size:small !important;
+  }
+
+}
+@media screen and (max-width:425px){
+  .field{
+    font-size:xx-small !important;
+  }
+  form .field input[type='text']#msg, form .field textarea#msg{
+    height:50px;
+  }
+}
