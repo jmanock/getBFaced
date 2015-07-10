@@ -172,6 +172,7 @@ form input[type="submit"] {
   -webkit-appearance: none;
   border: none;
   text-transform: uppercase;
+  position:relative;
   padding: 18px 50px;
   font-size: 1.4em;
   letter-spacing: 0.1em;
@@ -182,6 +183,10 @@ form input[type="submit"] {
   -o-transition: all 333ms ease-in-out;
   -ms-transition: all 333ms ease-in-out;
   transition: all 333ms ease-in-out;
+}
+.button{
+  margin-bottom:10px !important;
+  align:center !important;
 }
 form input[type="submit"]:hover {
   background: #313A3D;
