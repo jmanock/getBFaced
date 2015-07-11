@@ -11,6 +11,7 @@ $(document).ready(function(){
     // Shows last section if `Portfolio` is clicked
     if(x !== 'Portfolio'){
       $('section').hide();
+      $('h3').remove();
       $(this.getAttribute('href')).show();
     }
 
@@ -31,7 +32,6 @@ $(document).ready(function(){
   // shows phots based on sub-category click
   Photos = function(x){
     $('img').remove();
-    $('h3').remove();
     $('section').append('<h3>' + x +'</h3>');
     $.each(data.images, function(key, value){
       var k;

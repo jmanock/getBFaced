@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
 @import url(http://fonts.googleapis.com/css?family=Lato:300);
 body{
-  background-color:darkgray !important;
+  background-image:url('../images/background/blackWood.jpg') !important;
 }
 .navbar-brand{
   text-decoration:underline;
@@ -11,8 +11,8 @@ body{
   font-size:2em !important;
 }
 .navbar{
-  background-color:gray !important;
   font-family:'Walter Turncoat';
+  opacity:0.5;
 }
 li > a{
   color:purple !important;
@@ -21,10 +21,10 @@ li > a{
 footer{
   text-align:center;
   font-family:'Lato', sans-serif;
+  color:purple;
 }
 .active > a{
   text-decoration:underline !important;
-  background-color:gray !important;
 }
 a:hover{
   text-decoration:underline !important;
@@ -32,30 +32,27 @@ a:hover{
 .icon-bar{
   background-color:teal !important;
 }
-.dropdown-header{
-  color:teal !important;
-}
 img{
   display:inline;
   padding:10px;
 }
+h3{
+  color:teal !important;
+}
 section{
-  background-color:darkgray !important;
+  color:white;
   font-family:'Lato', sans-serif;
   font-size:medium;
+}
+section > p{
+  border:1px solid red;
 }
 h3{
   text-align:center;
   font-family:'Lato', sans-serif !important;
   font-weight:600 !important;
 }
-.dropdown-menu{
-  background-color:gray !important;
-}
-.dropdown-menu > li > a:hover{
-  text-decoration:underline !important;
-  background-color:gray !important;
-}
+
 span:hover{
   text-decoration:underline !important;
 }
