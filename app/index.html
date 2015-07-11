@@ -16,10 +16,12 @@
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- endbuild -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -86,27 +88,13 @@
 
     <section id='contact' style='display:none'>
       <h3>Contact</h3>
-      <form name='contactForm' action='send_form_email.php' method='post'>
-        <div class='field name-box'>
-          <input type="text" id='name' placeholder='Who Are You?'>
-          <label for="name">Name</label>
-          <span class='ss-icon'>check</span>
-        </div>
-
-        <div class='field email-box'>
-          <input type="text" id='email' placeholder='name@email.com'>
-          <label for="email">Email</label>
-          <span class='ss-icon'>check</span>
-        </div>
-
-        <div class='field msg-box'>
-          <textarea id="msg" rows="4" placeholder='Your message goes here..'></textarea>
-          <label for="msg">Msg</label>
-          <span class='ss-icon'>check</span>
-        </div>
-
-        <input type="submit" class='button' value='Send'>
-      </form>
+      <ul id='fa'>
+        <li><a href="#" class='fa fa-facebook-official fa-lg'>Facebook</a></li>
+        <li><a href="#" class='fa fa-twitter fa-lg'>Twitter</a></li>
+        <li><a href="#" class='fa fa-instagram fa-lg'>Instagram</a></li>
+        <li><a href="#" class='fa fa-envelope-o fa-lg'>Mail</a></li>
+        <li><a href="#" class='fa fa-phone fa-lg'>Phone</a></li>
+      </ul>
     </section>
 
     <footer>
