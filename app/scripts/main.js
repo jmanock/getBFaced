@@ -1,16 +1,21 @@
 $(document).ready(function(){
-  // Handels clicking nav bar links
+  // Changes the class on clicking navbar links
   $('.nav li').on('click',function(){
     $(this).addClass('active').siblings().removeClass('active');
   });
 
-  // Hides/Shows the content
-  $('li a').on('click', function(){
-
-    $('section').hide();
-    $(this.getAttribute('href')).show();
-
+  // Hides or Shows sections onClick
+  $('.nav li a').on('click', function(){
     var x = this.text;
+
+    // Shows last section if `Portfolio` is clicked
+    if(x !== 'Portfolio'){
+      $('section').hide();
+      $('h3').remove();
+      $(this.getAttribute('href')).show();
+    }
+
+    // if statment for sub-category on portfolio
     if(x === 'Beautie' ||
        x === 'Editorial' ||
        x === 'Fantasy' ||
@@ -22,14 +27,15 @@ $(document).ready(function(){
        x === 'NailArt'){
          Photos(x);
        }
+  }); // End `Click` function
 
-  });
-
-  Photos = function(j){
+  // shows phots based on sub-category click
+  Photos = function(x){
     $('img').remove();
+    $('section').append('<h3>' + x +'</h3>');
     $.each(data.images, function(key, value){
       var k;
-      switch(j){
+      switch(x){
         case 'Beautie': k = value.beautie;
         break;
         case 'Editorial': k = value.editorial;
@@ -63,9 +69,51 @@ $(document).ready(function(){
       }
 
     });
-  };
+  }; // End `Photos` function
 
-});
+  // `Contact form`
+  $('textarea').blur(function(){
+    $('#hire textarea').each(function(){
+      $this = $(this);
+      if(this.value !== ''){
+        $this.addClass('focused');
+        $('textare + label + span').css({'opacity':1});
+      }else{
+        $this.removeClass('focused');
+        $('textarea + label + span').css({'opacity': 0});
+      }
+    });
+  });
+
+  $('#hire .field:first-child input').blur(function(){
+    $('#hire .field:first-child input').each(function(){
+      $this = $(this);
+      if(this.value !== ''){
+        $this.addClass('focused');
+        $('.field:first-child input + label + span').css({'opacity':1});
+      }else{
+        $this.removeClass('focused');
+        $('.field:first-child input + label + span').css({'opacity':0});
+      }
+    });
+  });
+
+  $('#hire .field:nth-child(2) input').blur(function(){
+    $('#hire .field:nth-child(2) input').each(function(){
+      $this = $(this);
+      if(this.value !== ''){
+        $this.addClass('focused');
+        $('.field:nth-child(2) input + label + span').css({'opacity':1});
+      }else{
+        $this.removeClass('focused');
+        $('.field:nth-child(2) input + label + span').css({'opacity':0});
+      }
+    });
+  });
+
+}); // End jQuery call
+
+// json for images
 var data ={
  images:[
   {
