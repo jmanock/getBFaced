@@ -76,5 +76,8 @@ button{
 #fa{
   list-style-type:none;
   text-align:center;
+}
+#fa > li > a{
+  color:teal !important;
 
 }

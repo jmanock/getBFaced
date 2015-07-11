@@ -5,7 +5,7 @@ $(document).ready(function(){
   });
 
   // Hides or Shows sections onClick
-  $('li a').on('click', function(){
+  $('.nav li a').on('click', function(){
     var x = this.text;
 
     // Shows last section if `Portfolio` is clicked
@@ -31,6 +31,8 @@ $(document).ready(function(){
   // shows phots based on sub-category click
   Photos = function(x){
     $('img').remove();
+    $('h3').remove();
+    $('section').append('<h3>' + x +'</h3>');
     $.each(data.images, function(key, value){
       var k;
       switch(x){

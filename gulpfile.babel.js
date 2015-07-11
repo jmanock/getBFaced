@@ -4,20 +4,10 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
-import gulp-connect-php from 'gulp-connect-php';
+
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
-gulp.task('connect-sync', function(){
-  connect.serve({}, function(){
-    browserSync({
-      proxy:'localhost:8000'
-    });
-  });
-  gulp.watch('**/*.php').on('change', function(){
-    browserSync.reload();
-  });
-});
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.css')
