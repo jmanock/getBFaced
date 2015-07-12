@@ -113,21 +113,19 @@
 //
 // }); // End jQuery call
 $(document).ready(function(){
+  // Slide out menu
   $('.menu-btn').click(function(e){
     e.preventDefault();
-    // This is a basic move
-    //$('.responsive-menu').slideToggle();
+    
     var slideoutMenu = $('.slideout-menu');
     var slideoutMenuWidth = $('.slideout-menu').width();
 
     slideoutMenu.toggleClass('open');
     if(slideoutMenu.hasClass('open')){
-      console.log('something here');
       slideoutMenu.animate({
         left:'0px'
       });
     }else{
-      console.log('is there something here?');
       slideoutMenu.animate({
         left:-slideoutMenuWidth
       }, 250);
