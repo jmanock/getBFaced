@@ -1,80 +1,88 @@
 @import url(http://fonts.googleapis.com/css?family=Courgette);
 @import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
 @import url(http://fonts.googleapis.com/css?family=Lato:300);
+
 body{
-  background-image:url('../images/background/blackWood.jpg') !important;
-}
-.navbar-brand{
-  text-decoration:underline;
-  color:teal !important;
-  font-weight:bold !important;
-  font-size:2em !important;
-}
-.navbar{
-  font-family:'Walter Turncoat';
-  opacity:0.5;
-}
-li > a{
-  color:purple !important;
-  font-size:1.5em;
-}
-footer{
-  text-align:center;
   font-family:'Lato', sans-serif;
-  color:purple;
 }
-.active > a{
-  text-decoration:underline !important;
+/* Hamburger menu and slide out */
+.menu-btn div{
+  position:absolute;
+  left:100%;
+  top:64%;
+  padding-right:8px;
+  margin-top: -0.50em;
+  line-height: 1.2;
+  font-size:18px;
+  font-weight:200;
+  vertical-align:middle;
+  z-index:99;
 }
-a:hover{
-  text-decoration:underline !important;
-}
-.icon-bar{
-  background-color:teal !important;
-}
-img{
-  display:inline;
-  padding:10px;
-}
-h3{
-  color:teal !important;
-}
-section{
-  color:white;
-  font-family:'Lato', sans-serif;
-  font-size:medium;
-}
-section > p{
-  border:1px solid red;
-}
-h3{
-  text-align:center;
-  font-family:'Lato', sans-serif !important;
-  font-weight:600 !important;
+.menu-btn span{
+  display:block;
+  width: 19px;
+  height: 3px;
+  margin: 4px 0;
+  background-color:black;
 }
 
-span:hover{
-  text-decoration:underline !important;
+.slideout-menu{
+  position:fixed;
+  top:0;
+  left: -250px;
+  width: 250px;
+  height:100%;
+  background: #333;
 }
-button:hover{
-  background-color:gray !important;
+.slideout-menu h3{
+  position: relative;
+  padding: 12px 10px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 400;
+  border-bottom: 4px solid #222;
 }
-button{
-  background-color:gray !important;
+.slideout-menu .slideout-menu-toggle{
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  display: inline-block;
+  padding: 6px 9px 5px;
+  font-family: 'Walter Turncoat', sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  background: #222;
+  color: #999;
+  text-decoration: none;
+  vertical-align: top;
 }
-.small{
-  height:100px;
-  width:100px;
+.slideout-menu .slideout-menu-toggle:hover{
+  color: #fff;
 }
-.large{
-  height:200px;
-  width:200px;
+.slideout-menu ul{
+  list-style:none;
+  font-weight:300;
+  border-top: 1px solid #151515;
+  border-bottom: 1px solid #454545;
 }
-#fa{
-  list-style-type:none;
-  text-align:center;
+.slideout-menu ul li{
+  border-top: 1px solid #454545;
+  border-bottom: 1px solid #151515;
 }
-#fa > li > a{
-  color:teal !important;
-
+.slideout-menu ul li a{
+  position: relative;
+  display:block;
+  padding: 10px;
+  color:#999;
+  text-decoration:none;
+}
+.slideout-menu ul li a:hover{
+  background: #000;
+  color: #fff;
+}
+.slideout-menu ul li a i{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  opacity:.5;
 }
