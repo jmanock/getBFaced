@@ -96,14 +96,13 @@ $(document).ready(function(){
 
   // `Portfolio` click
   $('.portfolio').on('click', function(){
-    $('.sub').toggle();
+    $('.sub').toggle('slow');
   });
 
   // `Portfolio` sub menu click
   $('.sub li a').on('click', function(){
     var x = this.text;
-    $('.submenu').toggleClass(x);
-    console.log(x);
+    $('.'+x).toggle('slow');
   });
 }); // end jQuery
 
