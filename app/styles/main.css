@@ -4,9 +4,15 @@
 
 body{
   font-family:'Lato', sans-serif;
+  background-color:lightgray !important;
 }
 /* Hamburger menu and slide out */
-.menu-btn div{
+.mobile-nav{
+  border:1px solid red;
+  background-color:gray;
+  
+}
+/*.menu-btn div{
   position:absolute;
   left:100%;
   top:64%;
@@ -17,12 +23,13 @@ body{
   font-weight:200;
   vertical-align:middle;
   z-index:99;
-}
+}*/
+
 .menu-btn span{
   display:block;
-  width: 19px;
-  height: 3px;
-  margin: 4px 0;
+  width: 22px;
+  height: 5px;
+  margin: 9px 0;
   background-color:black;
 }
 
