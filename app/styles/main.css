@@ -66,6 +66,15 @@ h1{
   text-decoration:underline;
 }
 
-.submenu{
+.Hair{
+  display:none;
+}
+.Make-Up{
+  display:none;
+}
+.Nails{
+  display:none;
+}
+.sub{
   display:none;
 }
