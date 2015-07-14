@@ -16,10 +16,12 @@ body{
   cursor:pointer;
 }
 header{
-
+  background-color:gray;
 }
 h1{
-  text-align:center;
+  height:50px;
+  margin-top:0 !important;
+  margin-left:5% !important;
   font-family:'Walter Turncoat' !important;
   text-decoration:underline;
   color:purple !important;
