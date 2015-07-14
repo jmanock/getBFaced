@@ -114,9 +114,9 @@
 // }); // End jQuery call
 $(document).ready(function(){
   // Slide out menu
-  $('.menu-btn').click(function(e){
+  $('.menu-btn').on('click', function(e){
     e.preventDefault();
-    
+
     var slideoutMenu = $('.slideout-menu');
     var slideoutMenuWidth = $('.slideout-menu').width();
 
@@ -130,6 +130,11 @@ $(document).ready(function(){
         left:-slideoutMenuWidth
       }, 250);
     }
+  }); // End `Menu-btn` click
+
+  $('.portfolio').on('click', function(){
+    
+    console.log('I clicked a button');
   });
 }); // end jQuery
 
