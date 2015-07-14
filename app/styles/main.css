@@ -8,11 +8,21 @@ body{
 }
 /* Hamburger menu and slide out */
 .mobile-nav{
+  top:0;
   position:absolute;
   background-color:gray;
-  width:25px;
+  width:35px;
   height:50px;
   cursor:pointer;
+}
+header{
+
+}
+h1{
+  text-align:center;
+  font-family:'Walter Turncoat' !important;
+  text-decoration:underline;
+  color:purple !important;
 }
 /*.menu-btn div{
   position:absolute;
@@ -29,7 +39,7 @@ body{
 
 .menu-btn span{
   display:block;
-  width: 22px;
+  width: 30px;
   height: 5px;
   margin: 9px 0;
   background-color:black;
