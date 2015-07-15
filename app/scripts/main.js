@@ -100,9 +100,14 @@ $(document).ready(function(){
   });
 
   // `Portfolio` sub menu click
-  $('.sub li a').on('click', function(){
+  $('.cat').on('click', function(){
     var x = this.text;
     $('.'+x).toggle('slow');
+  });
+
+  // Links to show `Pics`
+  $('.submenu li a').on('click', function(){
+    console.log(this.text);
   });
 }); // end jQuery
 
