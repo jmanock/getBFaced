@@ -16,48 +16,14 @@
 //     }
 //
 //     // if statment for sub-category on portfolio
-//     if(x === 'Beautie' ||
-//        x === 'Editorial' ||
-//        x === 'Fantasy' ||
-//        x === 'Special Fx' ||
-//        x === 'Mens' ||
-//        x === 'Womens' ||
-//        x ==='Mani/Pedi' ||
-//        x === 'Acrylic' ||
-//        x === 'NailArt'){
-//          Photos(x);
-//        }
+//
 //   }); // End `Click` function
 //
 //   // shows phots based on sub-category click
 //   Photos = function(x){
-//     $('img').remove();
+
 //     $('section').append('<h3>' + x +'</h3>');
-//     $.each(data.images, function(key, value){
-//       var k;
-//       switch(x){
-//         case 'Beautie': k = value.beautie;
-//         break;
-//         case 'Editorial': k = value.editorial;
-//         break;
-//         case 'Fantasy': k = value.fantasy;
-//         break;
-//         case 'Special Fx': k = value.special;
-//         break;
-//         case 'Mens': k = value.mens;
-//         break;
-//         case 'Womens': k = value.womens;
-//         break;
-//         case 'Mani/Pedi': k = value.mani;
-//         break;
-//         case 'Acrylic': k = value.acrylic;
-//         break;
-//         case 'NailArt': k = value.nailArt;
-//         break;
-//       }
-//
-//       $('#photos').append('<img class="small" src=' + k + '></img>');
-//     });
+
 //     $('img').on('click', function(){
 //       if($(this).hasClass('small')){
 //         $(this).removeClass('small');
@@ -71,54 +37,15 @@
 //     });
 //   }; // End `Photos` function
 //
-//   // `Contact form`
-//   $('textarea').blur(function(){
-//     $('#hire textarea').each(function(){
-//       $this = $(this);
-//       if(this.value !== ''){
-//         $this.addClass('focused');
-//         $('textare + label + span').css({'opacity':1});
-//       }else{
-//         $this.removeClass('focused');
-//         $('textarea + label + span').css({'opacity': 0});
-//       }
-//     });
-//   });
 //
-//   $('#hire .field:first-child input').blur(function(){
-//     $('#hire .field:first-child input').each(function(){
-//       $this = $(this);
-//       if(this.value !== ''){
-//         $this.addClass('focused');
-//         $('.field:first-child input + label + span').css({'opacity':1});
-//       }else{
-//         $this.removeClass('focused');
-//         $('.field:first-child input + label + span').css({'opacity':0});
-//       }
-//     });
-//   });
-//
-//   $('#hire .field:nth-child(2) input').blur(function(){
-//     $('#hire .field:nth-child(2) input').each(function(){
-//       $this = $(this);
-//       if(this.value !== ''){
-//         $this.addClass('focused');
-//         $('.field:nth-child(2) input + label + span').css({'opacity':1});
-//       }else{
-//         $this.removeClass('focused');
-//         $('.field:nth-child(2) input + label + span').css({'opacity':0});
-//       }
-//     });
-//   });
 //
 // }); // End jQuery call
 $(document).ready(function(){
   // Slide out menu
-  $('.menu-btn').click(function(e){
+  var slideoutMenu = $('.slideout-menu');
+  var slideoutMenuWidth = $('.slideout-menu').width();
+  $('.menu-btn').on('click', function(e){
     e.preventDefault();
-    
-    var slideoutMenu = $('.slideout-menu');
-    var slideoutMenuWidth = $('.slideout-menu').width();
 
     slideoutMenu.toggleClass('open');
     if(slideoutMenu.hasClass('open')){
@@ -130,9 +57,84 @@ $(document).ready(function(){
         left:-slideoutMenuWidth
       }, 250);
     }
+  }); // End `Menu-btn` click
+
+  // `Menu` click
+  $('.menu').on('click',function(e){
+    e.preventDefault();
+    
+    $('h3').remove();
+    var x = this.text;
+
+    $('section').append('<h3>'+ x + '</h3>');
+    slideoutMenu.animate({
+      left:-slideoutMenuWidth
+    }, 250);
+  }); // End `Menu` click
+
+  // `Portfolio` click
+  $('.portfolio').on('click', function(e){
+    e.preventDefault();
+    $('.sub').toggle('slow');
+  });
+
+  // `Portfolio` sub menu click
+  $('.cat').on('click', function(e){
+    e.preventDefault();
+    var x = this.text;
+    $('.'+x).toggle('slow');
+  });
+
+  // Links to show `Pics`
+  $('.submenu li a').on('click', function(e){
+    e.preventDefault();
+    var x = this.text;
+    if(x === 'Beautie' ||
+       x === 'Editorial' ||
+       x === 'Fantasy' ||
+       x === 'Special Fx' ||
+       x === 'Men' ||
+       x === 'Women' ||
+       x ==='Mani/Pedi' ||
+       x === 'Acrylic' ||
+       x === 'Nail Art'){
+         Photos(x);
+       }
+       slideoutMenu.animate({
+         left:-slideoutMenuWidth
+       }, 250);
   });
 }); // end jQuery
+Photos = function(x){
+  $('img').remove();
+  $('h3').remove();
+  $('section').append('<h3>'+x+'</h3>');
+  $.each(data.images, function(key, value){
+    var k;
+    switch(x){
+      case 'Beautie': k = value.beautie;
+      break;
+      case 'Editorial': k = value.editorial;
+      break;
+      case 'Fantasy': k = value.fantasy;
+      break;
+      case 'Special Fx': k = value.special;
+      break;
+      case 'Men': k = value.mens;
+      break;
+      case 'Women': k = value.womens;
+      break;
+      case 'Mani/Pedi': k = value.mani;
+      break;
+      case 'Acrylic': k = value.acrylic;
+      break;
+      case 'Nail Art': k = value.nailArt;
+      break;
+    }
+    $('section').append('<img src=' + k + '></img>');
+  }); // End `Each` statment
 
+}; // End `Photos` function
 
 // json for images
 var data ={
