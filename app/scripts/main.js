@@ -42,11 +42,10 @@
 // }); // End jQuery call
 $(document).ready(function(){
   // Slide out menu
+  var slideoutMenu = $('.slideout-menu');
+  var slideoutMenuWidth = $('.slideout-menu').width();
   $('.menu-btn').on('click', function(e){
     e.preventDefault();
-
-    var slideoutMenu = $('.slideout-menu');
-    var slideoutMenuWidth = $('.slideout-menu').width();
 
     slideoutMenu.toggleClass('open');
     if(slideoutMenu.hasClass('open')){
@@ -59,6 +58,19 @@ $(document).ready(function(){
       }, 250);
     }
   }); // End `Menu-btn` click
+
+  // `Menu` click
+  $('.menu').on('click',function(e){
+    e.preventDefault();
+    
+    $('h3').remove();
+    var x = this.text;
+
+    $('section').append('<h3>'+ x + '</h3>');
+    slideoutMenu.animate({
+      left:-slideoutMenuWidth
+    }, 250);
+  }); // End `Menu` click
 
   // `Portfolio` click
   $('.portfolio').on('click', function(e){
@@ -88,6 +100,9 @@ $(document).ready(function(){
        x === 'Nail Art'){
          Photos(x);
        }
+       slideoutMenu.animate({
+         left:-slideoutMenuWidth
+       }, 250);
   });
 }); // end jQuery
 Photos = function(x){
