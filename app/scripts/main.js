@@ -62,7 +62,8 @@ $(document).ready(function(){
   // `Menu` click
   $('.menu').on('click',function(e){
     e.preventDefault();
-    
+
+    $('img').remove();
     $('h3').remove();
     var x = this.text;
 
