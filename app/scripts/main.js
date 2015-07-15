@@ -61,18 +61,21 @@ $(document).ready(function(){
   }); // End `Menu-btn` click
 
   // `Portfolio` click
-  $('.portfolio').on('click', function(){
+  $('.portfolio').on('click', function(e){
+    e.preventDefault();
     $('.sub').toggle('slow');
   });
 
   // `Portfolio` sub menu click
-  $('.cat').on('click', function(){
+  $('.cat').on('click', function(e){
+    e.preventDefault();
     var x = this.text;
     $('.'+x).toggle('slow');
   });
 
   // Links to show `Pics`
-  $('.submenu li a').on('click', function(){
+  $('.submenu li a').on('click', function(e){
+    e.preventDefault();
     var x = this.text;
     if(x === 'Beautie' ||
        x === 'Editorial' ||
