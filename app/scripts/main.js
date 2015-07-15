@@ -21,33 +21,9 @@
 //
 //   // shows phots based on sub-category click
 //   Photos = function(x){
-//     $('img').remove();
+
 //     $('section').append('<h3>' + x +'</h3>');
-//     $.each(data.images, function(key, value){
-//       var k;
-//       switch(x){
-//         case 'Beautie': k = value.beautie;
-//         break;
-//         case 'Editorial': k = value.editorial;
-//         break;
-//         case 'Fantasy': k = value.fantasy;
-//         break;
-//         case 'Special Fx': k = value.special;
-//         break;
-//         case 'Mens': k = value.mens;
-//         break;
-//         case 'Womens': k = value.womens;
-//         break;
-//         case 'Mani/Pedi': k = value.mani;
-//         break;
-//         case 'Acrylic': k = value.acrylic;
-//         break;
-//         case 'NailArt': k = value.nailArt;
-//         break;
-//       }
-//
-//       $('#photos').append('<img class="small" src=' + k + '></img>');
-//     });
+
 //     $('img').on('click', function(){
 //       if($(this).hasClass('small')){
 //         $(this).removeClass('small');
@@ -113,6 +89,8 @@ $(document).ready(function(){
 }); // end jQuery
 Photos = function(x){
   $('img').remove();
+  $('h3').remove();
+  $('section').append('<h3>'+x+'</h3>');
   $.each(data.images, function(key, value){
     var k;
     switch(x){
