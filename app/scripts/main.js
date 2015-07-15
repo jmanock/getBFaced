@@ -16,17 +16,7 @@
 //     }
 //
 //     // if statment for sub-category on portfolio
-//     if(x === 'Beautie' ||
-//        x === 'Editorial' ||
-//        x === 'Fantasy' ||
-//        x === 'Special Fx' ||
-//        x === 'Mens' ||
-//        x === 'Womens' ||
-//        x ==='Mani/Pedi' ||
-//        x === 'Acrylic' ||
-//        x === 'NailArt'){
-//          Photos(x);
-//        }
+//
 //   }); // End `Click` function
 //
 //   // shows phots based on sub-category click
@@ -107,10 +97,48 @@ $(document).ready(function(){
 
   // Links to show `Pics`
   $('.submenu li a').on('click', function(){
-    console.log(this.text);
+    var x = this.text;
+    if(x === 'Beautie' ||
+       x === 'Editorial' ||
+       x === 'Fantasy' ||
+       x === 'Special Fx' ||
+       x === 'Men' ||
+       x === 'Women' ||
+       x ==='Mani/Pedi' ||
+       x === 'Acrylic' ||
+       x === 'Nail Art'){
+         Photos(x);
+       }
   });
 }); // end jQuery
+Photos = function(x){
+  $('img').remove();
+  $.each(data.images, function(key, value){
+    var k;
+    switch(x){
+      case 'Beautie': k = value.beautie;
+      break;
+      case 'Editorial': k = value.editorial;
+      break;
+      case 'Fantasy': k = value.fantasy;
+      break;
+      case 'Special Fx': k = value.special;
+      break;
+      case 'Men': k = value.mens;
+      break;
+      case 'Women': k = value.womens;
+      break;
+      case 'Mani/Pedi': k = value.mani;
+      break;
+      case 'Acrylic': k = value.acrylic;
+      break;
+      case 'Nail Art': k = value.nailArt;
+      break;
+    }
+    $('section').append('<img src=' + k + '></img>');
+  }); // End `Each` statment
 
+}; // End `Photos` function
 
 // json for images
 var data ={
