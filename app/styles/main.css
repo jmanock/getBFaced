@@ -4,7 +4,7 @@
 
 body{
   font-family:'Lato', sans-serif;
-  background-color:lightgray !important;
+  background-color:gray !important;
 }
 
 .mobile-nav{
@@ -117,10 +117,17 @@ h4{
   text-decoration:none !important;
 }
 
-.About{
+.other{
   display:none;
-}
 
-.Resume{
-  display:none;
+  border:1px solid orange;
+  margin-right:10%;
+  margin-left:255px;
+  background-color:lightgray;
+  font-family:'Lato',sans-serif;
+  font-size:14pt;
+}
+.other > p{
+  margin-left:10px;
+  margin-right:10px;
 }
