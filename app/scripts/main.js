@@ -27,7 +27,7 @@ $(document).ready(function(){
     $('.other').hide();
     $('img').remove();
     $('h3').remove();
-
+    
     var x = this.text;
 
     $('section').append('<h3>'+ x + '</h3>');
