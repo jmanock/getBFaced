@@ -4,7 +4,7 @@
 
 body{
   font-family:'Lato', sans-serif;
-  background-color:lightgray !important;
+  background-color:gray !important;
 }
 
 .mobile-nav{
@@ -66,15 +66,78 @@ h1{
   text-decoration:underline;
 }
 
-.Hair{
+.Hair .Make-up .Nails .sub{
   display:none;
 }
-.Make-Up{
-  display:none;
+
+h3{
+  font-family:'Lato', sans-serif !important;
+  font-size:2.5em !important;
+  text-decoration:underline;
+  text-align:center;
 }
-.Nails{
-  display:none;
+
+h4{
+  text-align:center;
+  font-family:'Walter Turncoat' !important;
+  color:purple !important;
 }
-.sub{
+
+.smLinks{
+  list-style-type:none;
+  text-align:center;
+  font-size:1.5em;
+}
+
+.smLinks > li {
+  display:inline !important;
+}
+
+.testLinks{
+  position:absolute;
+  right:0;
+  top:0;
+  list-style-type:none;
+  font-size:2em;
+  padding-right:15px;
+  padding-top:5px;
+}
+
+.testLinks > li{
+  display:inline;
+}
+
+.testLinks > li > a{
+  color:mediumorchid;
+  text-decoration:none;
+}
+
+.testLinks > li > a:hover{
+  color:gray !important;
+  text-decoration:none !important;
+}
+
+.other{
   display:none;
+  border-radius:10px;
+  margin-right:10%;
+  margin-left:255px;
+  background-color:lightgray;
+  font-family:'Lato',sans-serif;
+  font-size:14pt;
+}
+
+.other > p{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.About{
+  background-image:url(../images/pinUp.jpg);
+  background-size:15%;
+  background-repeat:no-repeat;
+  background-color:lightgray;
+}
+.About > p{
+  margin-left:16%;
 }

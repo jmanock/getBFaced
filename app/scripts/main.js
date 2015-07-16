@@ -1,45 +1,3 @@
-// $(document).ready(function(){
-//   // Changes the class on clicking navbar links
-//   $('.nav li').on('click',function(){
-//     $(this).addClass('active').siblings().removeClass('active');
-//   });
-//
-//   // Hides or Shows sections onClick
-//   $('.nav li a').on('click', function(){
-//     var x = this.text;
-//
-//     // Shows last section if `Portfolio` is clicked
-//     if(x !== 'Portfolio'){
-//       $('section').hide();
-//       $('h3').remove();
-//       $(this.getAttribute('href')).show();
-//     }
-//
-//     // if statment for sub-category on portfolio
-//
-//   }); // End `Click` function
-//
-//   // shows phots based on sub-category click
-//   Photos = function(x){
-
-//     $('section').append('<h3>' + x +'</h3>');
-
-//     $('img').on('click', function(){
-//       if($(this).hasClass('small')){
-//         $(this).removeClass('small');
-//         $(this).addClass('big');
-//       }else
-//       if($(this).hasClass('big')){
-//         $(this).removeClass('big');
-//         $(this).addClass('small');
-//       }
-//
-//     });
-//   }; // End `Photos` function
-//
-//
-//
-// }); // End jQuery call
 $(document).ready(function(){
   // Slide out menu
   var slideoutMenu = $('.slideout-menu');
@@ -47,11 +5,14 @@ $(document).ready(function(){
   $('.menu-btn').on('click', function(e){
     e.preventDefault();
 
+
     slideoutMenu.toggleClass('open');
     if(slideoutMenu.hasClass('open')){
       slideoutMenu.animate({
         left:'0px'
       });
+      $('.sub').hide();
+      $('.submenu').hide();
     }else{
       slideoutMenu.animate({
         left:-slideoutMenuWidth
@@ -62,11 +23,16 @@ $(document).ready(function(){
   // `Menu` click
   $('.menu').on('click',function(e){
     e.preventDefault();
-    
+
+    $('.other').hide();
+    $('img').remove();
     $('h3').remove();
+
     var x = this.text;
 
     $('section').append('<h3>'+ x + '</h3>');
+    $('.'+x).show();
+
     slideoutMenu.animate({
       left:-slideoutMenuWidth
     }, 250);
