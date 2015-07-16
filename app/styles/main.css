@@ -102,14 +102,25 @@ h4{
   padding-right:15px;
   padding-top:5px;
 }
+
 .testLinks > li{
   display:inline;
 }
+
 .testLinks > li > a{
   color:mediumorchid;
   text-decoration:none;
 }
+
 .testLinks > li > a:hover{
   color:gray !important;
   text-decoration:none !important;
+}
+
+.About{
+  display:none;
+}
+
+.Resume{
+  display:none;
 }
