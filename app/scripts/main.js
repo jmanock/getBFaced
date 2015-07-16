@@ -5,11 +5,14 @@ $(document).ready(function(){
   $('.menu-btn').on('click', function(e){
     e.preventDefault();
 
+
     slideoutMenu.toggleClass('open');
     if(slideoutMenu.hasClass('open')){
       slideoutMenu.animate({
         left:'0px'
       });
+      $('.sub').hide();
+      $('.submenu').hide();
     }else{
       slideoutMenu.animate({
         left:-slideoutMenuWidth
@@ -21,9 +24,9 @@ $(document).ready(function(){
   $('.menu').on('click',function(e){
     e.preventDefault();
 
-    
     $('img').remove();
     $('h3').remove();
+
     var x = this.text;
 
     $('section').append('<h3>'+ x + '</h3>');
