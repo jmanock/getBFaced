@@ -146,8 +146,11 @@ h4{
 .small{
   height:10%;
   width:10%;
-  border:1px solid red;
   padding:5px;
+}
+section {
+  margin-right:10%;
+  margin-left:255px;
 }
 .big{
   height:auto;
