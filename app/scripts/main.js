@@ -46,6 +46,7 @@ $(document).ready(function(){
   // `Portfolio` sub menu click
   $('.cat').on('click', function(e){
     e.preventDefault();
+
     var x = this.text;
     $('.'+x).toggle('slow');
   });
@@ -53,6 +54,7 @@ $(document).ready(function(){
   // Links to show `Pics`
   $('.submenu li a').on('click', function(e){
     e.preventDefault();
+    $('.other').hide();
     var x = this.text;
     if(x === 'Beautie' ||
        x === 'Editorial' ||
