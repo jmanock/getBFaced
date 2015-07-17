@@ -138,6 +138,19 @@ h4{
   background-repeat:no-repeat;
   background-color:lightgray;
 }
+
 .About > p{
   margin-left:16%;
+}
+
+.small{
+  height:10%;
+  width:10%;
+  border:1px solid red;
+  padding:5px;
+}
+.big{
+  height:auto;
+  width:auto;
+  padding:5px;
 }

@@ -5,7 +5,6 @@ $(document).ready(function(){
   $('.menu-btn').on('click', function(e){
     e.preventDefault();
 
-
     slideoutMenu.toggleClass('open');
     if(slideoutMenu.hasClass('open')){
       slideoutMenu.animate({
@@ -70,6 +69,7 @@ $(document).ready(function(){
          left:-slideoutMenuWidth
        }, 250);
   });
+
 }); // end jQuery
 Photos = function(x){
   $('img').remove();
@@ -97,9 +97,17 @@ Photos = function(x){
       case 'Nail Art': k = value.nailArt;
       break;
     }
-    $('section').append('<img src=' + k + '></img>');
+    $('section').append('<img class="small" src=' + k + '></img>');
   }); // End `Each` statment
-
+    $('img').on('click', function(){
+      if($(this).hasClass('small')){
+        $(this).removeClass('small');
+        $(this).addClass('big');
+      }else{
+        $(this).removeClass('big');
+        $(this).addClass('small');
+      }
+    });
 }; // End `Photos` function
 
 // json for images
