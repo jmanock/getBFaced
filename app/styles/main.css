@@ -151,12 +151,12 @@ h4{
 }*/
 
 section {
-
+  position:relative;
   margin-left:255px;
   margin-right:10%;
 }
 section > div{
-  
+
 }
 section > div > img{
 

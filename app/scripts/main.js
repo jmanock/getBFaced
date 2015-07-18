@@ -71,9 +71,7 @@ $(document).ready(function(){
          left:-slideoutMenuWidth
        }, 250);
   });
-  $('button').on('click', function(){
-    console.log('something good should happen');
-  });
+  
 }); // end jQuery
 Photos = function(x){
   $('img').remove();

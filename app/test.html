@@ -1,0 +1,84 @@
+<html>
+  <head>
+  <style>
+  .slider{
+    position:relative;
+  }
+  .slider > .buttons{
+    position: absolute;
+    z-index:1;
+    width: 100%;
+    top:25%;
+  }
+  .slider > .buttons > a:first-child{
+    float:left;
+  }
+  .slider > .buttons > a:last-child{
+    float:right;
+  }
+  .slider .slides {
+    overflow:hidden;
+    white-space:nowrap;
+  }
+  .slider .slides > li{
+    display:inline-block;
+    transition: margin-left 2s ease;
+    width:100%;
+    border:1px solid green;
+  }
+  .slider .slides > li.exit{
+    margin-left:-100%;
+  }
+
+
+  </style>
+  </head>
+  <body>
+    <div class="slider">
+      <nav class='buttons'>
+        <a href="#" class='back'>Back</a>
+        <a href="#" class='next'>Next</a>
+      </nav>
+      <section>
+        <ol class='row slides'>
+
+        </ol>
+      </section>
+    </div>
+    <script src='bower_components/jquery/dist/jquery.js'></script>
+    <script src='bower_components/bootstrap/dist/js/bootstrap.js'></script>
+
+    <script>
+    $(document).ready(function(){
+      var images = [
+        {src:'images/mani/1.jpg'},
+        {src:'images/mani/2.jpg'},
+        {src:'images/mani/3.jpg'},
+        {src:'images/mani/4.jpg'},
+        {src:'images/mani/5.jpg'},
+        {src:'images/mani/6.jpg'},
+        {src:'images/mani/7.jpg'},
+        {src:'images/mani/8.jpg'},
+        {src:'images/mani/9.jpg'},
+        {src:'images/mani/10.jpg'},
+      ];
+
+      $.each(images, function(index,image){
+
+        $('ol').append('<li>'+'<img src='+image.src+'></img></li>');
+      });// end each function
+      $('.next').on('click', function(){
+        // Add class to photo ie exit
+        // Add class to next photo ie active
+
+        // need to get first image
+        $('li').addClass('exit');
+
+      });
+      $('.back').on('click', function(){
+        console.log('I just clicked on the back button');
+      });
+    }); // End of jquery
+    </script>
+  </body>
+</html>
