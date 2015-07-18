@@ -143,15 +143,27 @@ h4{
   margin-left:16%;
 }
 
-.small{
-  height:10%;
-  width:10%;
+/*.small{
+  height:30%;
+  width:30%;
   padding:5px;
-}
+  display:inline-block;
+}*/
 
 section {
-  margin-right:10%;
+
   margin-left:255px;
+  margin-right:10%;
+}
+section > div{
+  
+}
+section > div > img{
+
+
+}
+button{
+
 }
 
 .big{

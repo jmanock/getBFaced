@@ -71,12 +71,15 @@ $(document).ready(function(){
          left:-slideoutMenuWidth
        }, 250);
   });
-
+  $('button').on('click', function(){
+    console.log('something good should happen');
+  });
 }); // end jQuery
 Photos = function(x){
   $('img').remove();
   $('h3').remove();
-  $('section').append('<h3>'+x+'</h3>');
+  $('body').append('<h3>'+x+'</h3>');
+  $('section').append('<ul class="slider"');
   $.each(data.images, function(key, value){
     var k;
     switch(x){
@@ -99,8 +102,10 @@ Photos = function(x){
       case 'Nail Art': k = value.nailArt;
       break;
     }
-    $('section').append('<img class="small" src=' + k + '></img>');
+    $('section').append('<div>' + '<img class="small" src=' + k + '></img>' + '</div>');
+
   }); // End `Each` statment
+  $('section').append('<button>Next</button>');
     $('img').on('click', function(){
       if($(this).hasClass('small')){
         $(this).removeClass('small');
