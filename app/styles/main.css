@@ -144,20 +144,17 @@ h4{
 }
 
 #slider{
-  height:auto;
-  width:auto;
-
-  border:10px solid green;
+  margin-left:255px;
+  height:200px;
+  width:200px;
   overflow:hidden;
-  
+  border:1px solid black;
   border-radius:10px;
 }
 img{
 
 }
 #slider > img{
-
-  float:right;
 
 }
 a.left{
