@@ -100,22 +100,33 @@ Photos = function(x){
       case 'Nail Art': k = value.nailArt;
       break;
     }
+
     $('section').append('<img src=' + k + ' id='+key+'></img>');
-    console.log(key);
-
   }); // End `Each` statment
-  $('section').append('<button>Next</button>');
-    $('img').on('click', function(){
-      if($(this).hasClass('small')){
-        $(this).removeClass('small');
-        $(this).addClass('big');
-      }else{
-        $(this).removeClass('big');
-        $(this).addClass('small');
-      }
-    });
-}; // End `Photos` function
 
+}; // End `Photos` function
+var sliderInt = 0;
+showSlide = function(id){
+  $('#slider > img').fadeOut(300);
+  $('#slider > img#' + sliderInt).fadeIn(300);
+};
+
+prev = function(){
+  count = $('#slider > img').size();
+  sliderInt = (sliderInt -1)%count;
+  console.log(sliderInt);
+  if(sliderInt === -1){
+    sliderInt = 9;
+  }
+  showSlide();
+};
+
+next = function(){
+  count = $('#slider > img').size();
+  sliderInt = (sliderInt +1)%count;
+  console.log(sliderInt);
+  showSlide();
+};
 // json for images
 var data ={
  images:[
