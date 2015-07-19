@@ -106,15 +106,16 @@ Photos = function(x){
 
 }; // End `Photos` function
 var sliderInt = 0;
-showSlide = function(id){
+showSlide = function(){
   $('#slider > img').fadeOut(500);
   $('#slider > img#' + sliderInt).fadeIn(500);
+
 };
 
 prev = function(){
   count = $('#slider > img').size();
   sliderInt = (sliderInt -1)%count;
-  console.log(sliderInt);
+
   if(sliderInt === -1){
     sliderInt = 9;
   }
@@ -124,7 +125,7 @@ prev = function(){
 next = function(){
   count = $('#slider > img').size();
   sliderInt = (sliderInt +1)%count;
-  console.log(sliderInt);
+
   showSlide();
 };
 // json for images
