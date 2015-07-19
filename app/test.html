@@ -1,48 +1,43 @@
 <html>
   <head>
   <style>
-  .slider{
-    position:relative;
-  }
-  .slider > .buttons{
-    position: absolute;
-    z-index:1;
-    width: 100%;
-    top:25%;
-  }
-  .slider > .buttons > a:first-child{
-    float:left;
-  }
-  .slider > .buttons > a:last-child{
-    float:right;
-  }
-  .slider .slides {
+  #slider{
+    height:300px;
+    width:640px;
     overflow:hidden;
-    white-space:nowrap;
+    margin: 30px auto;
+    border-radius:10px;
   }
-  .slider .slides > li{
-    display:inline-block;
-    transition: margin-left 2s ease;
-    width:100%;
-    border:1px solid green;
+  #slider > img{
+    width:640px;
+    height: 300px;
+    float:left;
+    display:none;
   }
-  .slider .slides > li.exit{
-    margin-left:-100%;
+  a{
+    padding:5px 10px;
+    background-color:#f0f0f0;
+    margin-top:30px;
+    text-decoration:none;
+    color: #666;
   }
-
-
+a.left{
+  float:left;
+}
+a.right{
+  float:right;
+}
   </style>
   </head>
   <body>
-    <div class="slider">
+    <div class="slidr">
       <nav class='buttons'>
-        <a href="#" class='back'>Back</a>
-        <a href="#" class='next'>Next</a>
+        <a href="#" class='left' onclick='prev(); return false;'>Prevouis</a>
+        <a href="#" class='right' onclick='next();return false;'>Next</a>
       </nav>
-      <section>
-        <ol class='row slides'>
+      <section id='slider'>
 
-        </ol>
+
       </section>
     </div>
     <script src='bower_components/jquery/dist/jquery.js'></script>
@@ -64,21 +59,44 @@
       ];
 
       $.each(images, function(index,image){
+        // id=+index
 
-        $('ol').append('<li>'+'<img src='+image.src+'></img></li>');
+        $('#slider').append( '<img src=' +image.src+' id='+index+'></img>');
+        $('img').addClass(index);
       });// end each function
       $('.next').on('click', function(){
-        // Add class to photo ie exit
-        // Add class to next photo ie active
+        /*
+          ~ Need to add class to image shown
+        */
 
-        // need to get first image
-        $('li').addClass('exit');
 
       });
       $('.back').on('click', function(){
         console.log('I just clicked on the back button');
       });
+
     }); // End of jquery
+    var sliderInt = 0;
+
+    showSlide = function(id){
+      $('#slider > img').fadeOut(300);
+      $('#slider > img#' + sliderInt).fadeIn(300);
+    };
+
+    prev = function(){
+      count = $('#slider > img').size();
+      sliderInt = (sliderInt -1).mod(count);
+      console.log(sliderInt);
+      showSlide();
+    };
+
+    next = function(){
+      count = $('#slider > img').size();
+      sliderInt = (sliderInt + 1)% count;
+      console.log(sliderInt);
+      showSlide();
+    };
+
     </script>
   </body>
 </html>
