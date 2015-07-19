@@ -71,7 +71,7 @@ $(document).ready(function(){
          left:-slideoutMenuWidth
        }, 250);
   });
-  
+
 }); // end jQuery
 Photos = function(x){
   $('img').remove();
@@ -100,7 +100,8 @@ Photos = function(x){
       case 'Nail Art': k = value.nailArt;
       break;
     }
-    $('section').append('<div>' + '<img class="small" src=' + k + '></img>' + '</div>');
+    $('section').append('<img src=' + k + ' id='+key+'></img>');
+    console.log(key);
 
   }); // End `Each` statment
   $('section').append('<button>Next</button>');
