@@ -144,22 +144,21 @@ h4{
 }
 
 #slider{
-  height:200px;
-  width:200px;
+  height:auto;
+  width:auto;
 
   border:10px solid green;
   overflow:hidden;
-  margin:30px auto;
+  
   border-radius:10px;
 }
 img{
 
 }
 #slider > img{
-  width:200px;
-  height:200px;
-  float:left;
-  
+
+  float:right;
+
 }
 a.left{
   position:absolute;

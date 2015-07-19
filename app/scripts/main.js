@@ -107,8 +107,8 @@ Photos = function(x){
 }; // End `Photos` function
 var sliderInt = 0;
 showSlide = function(id){
-  $('#slider > img').fadeOut(300);
-  $('#slider > img#' + sliderInt).fadeIn(300);
+  $('#slider > img').fadeOut(500);
+  $('#slider > img#' + sliderInt).fadeIn(500);
 };
 
 prev = function(){
