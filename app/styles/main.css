@@ -144,16 +144,15 @@ h4{
 }
 
 #slider{
-
+  padding-bottom:100px;
   margin-left:255px;
-  height:325px;
+  height:350px;
   width:600px;
   overflow:hidden;
-  border:10px solid black;
 
 }
 #slider > img{
-  border:2px solid green;
+  display:inline-block;
   height:300px;
   width:300px;
   margin-left:20%;
@@ -163,7 +162,7 @@ h4{
 .left{
   float:left;
   margin-top:20%;
-  
+
 }
 .left:after{
 
