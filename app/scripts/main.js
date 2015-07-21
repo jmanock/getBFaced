@@ -80,6 +80,7 @@ Photos = function(x){
   $('section').append('<ul class="slider"');
   $.each(data.images, function(key, value){
     var k;
+
     switch(x){
       case 'Beautie': k = value.beautie;
       break;
@@ -103,7 +104,7 @@ Photos = function(x){
 
     $('section').append('<img src=' + k + ' id='+key+'></img>');
   }); // End `Each` statment
-
+  
 }; // End `Photos` function
 var sliderInt = 0;
 showSlide = function(){

@@ -180,10 +180,6 @@ h4{
   bottom:-175%;
 }
 
-.left:hover{
-  color:purple;
-}
-
 .right{
   color:transparent;
   position:relative;
@@ -202,6 +198,6 @@ h4{
   bottom:-175%;
 }
 
-.right:hover{
-  color:purple;
+.right:hover, .left:hover{
+  color:#333;
 }
