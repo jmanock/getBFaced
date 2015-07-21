@@ -128,22 +128,27 @@ a.right{
 
 
 #overflow {
-	width: 100%;
+
 	overflow: hidden;
+
 }
 
 article img {
-	width: 100%;
+	width: 25%;
+  border:10px solid red;
 }
+
 
 #slides .inner {
 	width: 500%;
-	line-height: 0;
+
+  /*Sets the width of all pics */
 }
 
 #slides article {
 	width: 20%;
 	float: left;
+
 }
 
 /* Slider Styling */
@@ -178,19 +183,15 @@ article img {
 	background: #bbb;
 }
 
-#active label:hover {
-	background: #ccc;
-	border-color: #777 !important;
-}
-
-#controls label:hover {
-	opacity: 0.8;
-}
-
 #slide1:checked ~ #controls label:nth-child(2),
 #slide2:checked ~ #controls label:nth-child(3),
 #slide3:checked ~ #controls label:nth-child(4),
 #slide4:checked ~ #controls label:nth-child(5),
+#slide5:checked ~ #controls label:nth-child(6),
+#slide1:checked ~ #controls label:nth-child(7),
+#slide2:checked ~ #controls label:nth-child(8),
+#slide3:checked ~ #controls label:nth-child(9),
+#slide4:checked ~ #controls label:nth-child(10),
 #slide5:checked ~ #controls label:nth-child(1) {
 	background: url('http://www.webhosting.uk.com/kb/wp-content/uploads/2013/04/Small-arrow-right-icon.png') no-repeat;
 	float: right;
@@ -201,11 +202,16 @@ article img {
 }
 
 
-#slide1:checked ~ #controls label:nth-child(5),
+#slide1:checked ~ #controls label:nth-child(10),
 #slide2:checked ~ #controls label:nth-child(1),
 #slide3:checked ~ #controls label:nth-child(2),
 #slide4:checked ~ #controls label:nth-child(3),
-#slide5:checked ~ #controls label:nth-child(4) {
+#slide5:checked ~ #controls label:nth-child(4),
+#slide6:checked ~ #controls label:nth-child(5),
+#slide3:checked ~ #controls label:nth-child(6),
+#slide4:checked ~ #controls label:nth-child(7),
+#slide5:checked ~ #controls label:nth-child(8),
+#slide6:checked ~ #controls label:nth-child(9) {
 	background: url('http://www.webhosting.uk.com/kb/wp-content/uploads/2013/04/Small-arrow-right-icon.png') no-repeat;
 	float: left;
 	margin-right:100px;
@@ -218,31 +224,18 @@ article img {
 #slide2:checked ~ #active label:nth-child(2),
 #slide3:checked ~ #active label:nth-child(3),
 #slide4:checked ~ #active label:nth-child(4),
-#slide5:checked ~ #active label:nth-child(5) {
+#slide5:checked ~ #active label:nth-child(5),
+#slide1:checked ~ #active label:nth-child(6),
+#slide2:checked ~ #active label:nth-child(7),
+#slide3:checked ~ #active label:nth-child(8),
+#slide4:checked ~ #active label:nth-child(9),
+#slide5:checked ~ #active label:nth-child(10) {
 	background: #333;
 	border-color: #333 !important;
 }
 
 /* Info Box */
 
-.info {
-	line-height: 20px;
-	margin: 0 0 -150%;
-	position: absolute;
-	font-style: italic;
-	padding: 30px 30px;
-	opacity: 0;
-	color: #000;
-	text-align: left;
-}
-
-.info h3 {
-	color: #333;
-	margin: 0 0 5px;
-	font-weight: normal;
-	font-size: 22px;
-	font-style: normal;
-}
 
 /* Slider Styling */
 
@@ -302,7 +295,12 @@ article img {
 #slide2:checked ~ #slides article:nth-child(2) .info,
 #slide3:checked ~ #slides article:nth-child(3) .info,
 #slide4:checked ~ #slides article:nth-child(4) .info,
-#slide5:checked ~ #slides article:nth-child(5) .info {
+#slide5:checked ~ #slides article:nth-child(5) .info,
+#slide1:checked ~ #slides article:nth-child(6) .info,
+#slide2:checked ~ #slides article:nth-child(7) .info,
+#slide3:checked ~ #slides article:nth-child(8) .info,
+#slide4:checked ~ #slides article:nth-child(9) .info,
+#slide5:checked ~ #slides article:nth-child(10) .info {
 	opacity: 1;
 	-webkit-transition: all 1s ease-out 0.6s;
 	-moz-transition: all 1s ease-out 0.6s;
@@ -331,6 +329,11 @@ article img {
 		<input type=radio name=slider id=slide3 />
 		<input type=radio name=slider id=slide4 />
 		<input type=radio name=slider id=slide5 />
+    <input type="radio" name=slider id=slide6>
+    <input type="radio" name='slider' id='slide7'>
+    <input type="radio" name='slider' id='slide8'>
+    <input type="radio" name='slider' id='slide9'>
+    <input type="radio" name='slider' id='slide10'>
     <div id=slides>
 
 			<div id=overflow>
@@ -362,6 +365,29 @@ article img {
 						<img src="images/mani/1.jpg" alt="">
 					</article>
 
+          <article>
+            <div class="info"></div>
+            <img src="images/mani/6.jpg" alt="">
+          </article>
+
+          <article>
+            <div class="info"></div>
+            <img src="images/mani/7.jpg" alt="">
+          </article>
+          <article>
+            <div class="info"></div>
+            <img src="images/mani/8.jpg" alt="">
+          </article>
+
+          <article>
+            <div class="info"></div>
+            <img src="images/mani/9.jpg" alt="">
+          </article>
+          <article>
+            <div class="info"></div>
+            <img src="images/mani/10.jpg" alt="">
+          </article>
+
 				</div> <!-- .inner -->
 
 			</div> <!-- #overflow -->
@@ -378,6 +404,11 @@ article img {
 			<label for=slide3></label>
 			<label for=slide4></label>
 			<label for=slide5></label>
+      <label for=slide6></label>
+			<label for=slide7></label>
+			<label for=slide8></label>
+			<label for=slide9></label>
+			<label for=slide10></label>
 
 		</div> <!-- #controls -->
 
@@ -388,6 +419,11 @@ article img {
 			<label for=slide3></label>
 			<label for=slide4></label>
 			<label for=slide5></label>
+      <label for=slide6></label>
+			<label for=slide7></label>
+			<label for=slide8></label>
+			<label for=slide9></label>
+			<label for=slide10></label>
 
 		</div> <!-- #active -->
 
