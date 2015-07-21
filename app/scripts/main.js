@@ -5,7 +5,6 @@ $(document).ready(function(){
   $('.menu-btn').on('click', function(e){
     e.preventDefault();
 
-
     slideoutMenu.toggleClass('open');
     if(slideoutMenu.hasClass('open')){
       slideoutMenu.animate({
@@ -47,6 +46,7 @@ $(document).ready(function(){
   // `Portfolio` sub menu click
   $('.cat').on('click', function(e){
     e.preventDefault();
+
     var x = this.text;
     $('.'+x).toggle('slow');
   });
@@ -54,6 +54,7 @@ $(document).ready(function(){
   // Links to show `Pics`
   $('.submenu li a').on('click', function(e){
     e.preventDefault();
+    $('.other').hide();
     var x = this.text;
     if(x === 'Beautie' ||
        x === 'Editorial' ||
@@ -70,11 +71,13 @@ $(document).ready(function(){
          left:-slideoutMenuWidth
        }, 250);
   });
+
 }); // end jQuery
 Photos = function(x){
   $('img').remove();
   $('h3').remove();
-  $('section').append('<h3>'+x+'</h3>');
+  $('body').append('<h3>'+x+'</h3>');
+  $('section').append('<ul class="slider"');
   $.each(data.images, function(key, value){
     var k;
     switch(x){
@@ -97,11 +100,34 @@ Photos = function(x){
       case 'Nail Art': k = value.nailArt;
       break;
     }
-    $('section').append('<img src=' + k + '></img>');
+
+    $('section').append('<img src=' + k + ' id='+key+'></img>');
   }); // End `Each` statment
 
 }; // End `Photos` function
+var sliderInt = 0;
+showSlide = function(){
+  $('#slider > img').fadeOut(500);
+  $('#slider > img#' + sliderInt).fadeIn(500);
 
+};
+
+prev = function(){
+  count = $('#slider > img').size();
+  sliderInt = (sliderInt -1)%count;
+
+  if(sliderInt === -1){
+    sliderInt = 9;
+  }
+  showSlide();
+};
+
+next = function(){
+  count = $('#slider > img').size();
+  sliderInt = (sliderInt +1)%count;
+
+  showSlide();
+};
 // json for images
 var data ={
  images:[

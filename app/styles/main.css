@@ -138,6 +138,33 @@ h4{
   background-repeat:no-repeat;
   background-color:lightgray;
 }
+
 .About > p{
   margin-left:16%;
+}
+
+#slider{
+  margin-left:255px;
+  height:200px;
+  width:200px;
+  overflow:hidden;
+  border:1px solid black;
+  border-radius:10px;
+}
+img{
+
+}
+#slider > img{
+
+}
+a.left{
+  position:absolute;
+  left:0;
+  color:black;
+  z-index:0;
+}
+a.right{
+  position:absolute;
+  right:0;
+  color:purple;
 }
