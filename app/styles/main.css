@@ -147,7 +147,7 @@ h4{
 
   margin-left:255px;
   height:325px;
-  width:500px;
+  width:600px;
   overflow:hidden;
   border:10px solid black;
 
@@ -160,15 +160,31 @@ h4{
   margin-top:5px;
   border-radius:15px;
 }
-a.left{
-  position:absolute;
-  left:0;
-
-  color:black;
-  z-index:0;
+.left{
+  float:left;
+  margin-top:20%;
+  
 }
-a.right{
+.left:after{
+
   position:absolute;
-  right:0;
-  color:purple;
+  content:'';
+  top:-210%;
+  bottom:-240%;
+  left:0;
+  right:-100%;
+}
+.right{
+  float:right;
+  margin-top:20%;
+
+}
+.right:after{
+
+  position:absolute;
+  content:'';
+  top:-210%;
+  bottom:-240%;
+  left:-100%;
+  right:0px;
 }
