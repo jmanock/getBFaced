@@ -151,7 +151,7 @@ h4{
 
 }
 #slider > h3{
-  margin-left:20px;
+  margin-left:60px;
   margin-top:-10px;
   margin-bottom:10px;
 }
@@ -169,10 +169,15 @@ h4{
   color:transparent;
   margin-left:40px;
 }
+.left:visited{
+  text-decoration:none;
+  color:transparent;
+}
 .left:hover{
   text-decoration:none;
   color:teal;
 }
+
 .left:after{
   position:absolute;
   content:'';
@@ -188,10 +193,15 @@ h4{
   float:right;
   margin-right:40px;
 }
-.right:hover{
+.right:visited{
+  text-decoration:none;
+  
+}
+.right:hover {
   text-decoration:none;
   color:teal;
 }
+
 .right:after{
   position:absolute;
   content:'';
