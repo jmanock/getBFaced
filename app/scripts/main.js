@@ -76,7 +76,7 @@ $(document).ready(function(){
 Photos = function(x){
   $('img').remove();
   $('h3').remove();
-  $('body').append('<h3>'+x+'</h3>');
+  $('section').append('<h3>'+x+'</h3>');
   $('section').append('<ul class="slider"');
   $.each(data.images, function(key, value){
     var k;
