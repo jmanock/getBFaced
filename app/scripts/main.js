@@ -57,6 +57,7 @@ $(document).ready(function(){
     $('.other').hide();
     $('#navigation').empty();
     $('#slider').empty();
+
     var x = this.text;
     if(x === 'Beautie' ||
        x === 'Editorial' ||
@@ -115,8 +116,8 @@ navigation(count);
 
 navigation = function(x){
 
-  var currentNav;
-
+  var currentNav = parseInt($('.active').index());
+  currentNav = 0;
   $('#navigation').find('li').first().addClass('active');
 
   // `Radio` buttons link to pics index
@@ -126,12 +127,13 @@ navigation = function(x){
   });
 
   $('#next').on('click', function(){
-    currentNav = parseInt($('.active').index());
-    if(currentNav < x-1){
+    // currentNav = parseInt($('.active').index());
+    if(currentNav < x -1){
       currentNav++;
       goTo(currentNav);
       console.log(currentNav);
     }else{
+      currentNav = 0;
       goTo(0);
     }
   });
