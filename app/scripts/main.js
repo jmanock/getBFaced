@@ -115,17 +115,9 @@ navigation(count);
 
 navigation = function(x){
 
-  var pictures = $('#slider').children('li');
-  var navItems = $('#navigation').children('li');
-  var currentNav, currentPic;
+  var currentNav;
 
   $('#navigation').find('li').first().addClass('active');
-
-  goTo = function(i){
-    $(navItems).removeClass('active');
-    $('#navigation li').eq(i).addClass('active');
-    pictures.fadeOut(400).eq(i).fadeIn(400);
-  };
 
   // `Radio` buttons link to pics index
   $('#navigation li').on('click', function(){
@@ -135,30 +127,36 @@ navigation = function(x){
 
   $('#next').on('click', function(){
     currentNav = parseInt($('.active').index());
-
     if(currentNav < x-1){
-      goTo(currentNav + 1);
+      currentNav++;
+      goTo(currentNav);
       console.log(currentNav);
     }else{
-      // Dont think this is right??? 
       goTo(0);
     }
   });
 
   $('#prev').on('click', function(){
     currentNav = parseInt($('.active').index());
-    if(currentNav > 0){
-      goTo(currentNav -1);
-      console.log(currentNav);
-    }else{
-      goTo(x-1);
-      console.log('this is x - 1');
-    }
+
+    // if(currentNav > 0){
+    //   goTo(currentNav -1);
+    //   console.log(currentNav);
+    // }else{
+    //   goTo(9);
+    //   console.log('this is x - 1');
+    // }
 
   });
-  goTo(0);
-}; // End `Navigation` function
 
+}; // End `Navigation` function
+goTo = function(i){
+  var navItems = $('#navigation').children('li');
+  var pictures = $('#slider').children('li');
+  $(navItems).removeClass('active');
+  $('#navigation li').eq(i).addClass('active');
+  pictures.fadeOut(400).eq(i).fadeIn(400);
+};
 // json for images
 var data ={
  images:[
