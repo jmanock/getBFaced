@@ -105,9 +105,8 @@
       $('#next').on('click', function(){
         currentNav = parseInt($('.active').index());
 
-        if(currentNav < count){
+        if(currentNav < count-1){
           goTo(currentNav+1);
-          console.log(currentNav);
         }else{
           goTo(0);
         }
