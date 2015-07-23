@@ -118,6 +118,7 @@ navigation = function(x){
 
   var currentNav = parseInt($('.active').index());
   currentNav = 0;
+  goTo(0);
   $('#navigation').find('li').first().addClass('active');
 
   // `Radio` buttons link to pics index
@@ -131,7 +132,7 @@ navigation = function(x){
     if(currentNav < x -1){
       currentNav++;
       goTo(currentNav);
-      console.log(currentNav);
+
     }else{
       currentNav = 0;
       goTo(0);
@@ -153,6 +154,8 @@ navigation = function(x){
 
 }; // End `Navigation` function
 goTo = function(i){
+  // This is not clearing when changeing sub menus
+  console.log(i);
   var navItems = $('#navigation').children('li');
   var pictures = $('#slider').children('li');
   $(navItems).removeClass('active');
