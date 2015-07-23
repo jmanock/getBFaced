@@ -73,11 +73,12 @@ $(document).ready(function(){
   });
 
 }); // end jQuery
+var count = 0;
 Photos = function(x){
   $('img').remove();
   $('h3').remove();
-  $('section').append('<h3>'+x+'</h3>');
-  $('section').append('<ul class="slider"');
+  $('.container').append('<h3>'+x+'</h3>');
+
   $.each(data.images, function(key, value){
     var k;
 
@@ -102,33 +103,50 @@ Photos = function(x){
       break;
     }
 
-    $('section').append('<img src=' + k + ' id='+key+'></img>');
+    $('#slider').append('<li>'+'<img src=' + k + '></img></li>');
+    $('#navigation').append('<li></li>');
+    count++;
   }); // End `Each` statment
-
+navigation(count);
 }; // End `Photos` function
-var sliderInt = 0;
-showSlide = function(){
-  $('#slider > img').fadeOut(500);
-  $('#slider > img#' + sliderInt).fadeIn(500);
-};
+navigation = function(x){
+  var pictures = $('#slider').children('li');
+  var navItems = $('#navigation').children('li');
+  var currentNav, currentPic;
 
-prev = function(){
-  count = $('#slider > img').size();
-  sliderInt = (sliderInt -1)%count;
+  $('#navigation').find('li').first().addClass('active');
 
-  if(sliderInt === -1){
-    sliderInt = 9;
-  }
-  showSlide();
-};
+  goTo = function(i){
+    $(navItems).removeClass('active');
+    $('#navigation li').eq(i).addClass('active');
+    pictures.fadeOut(400).eq(i).fadeIn(400);
+  };
 
-next = function(){
-  count = $('#slider > img').size();
-  sliderInt = (sliderInt +1)%count;
+  $('#navigation li').on('click', function(){
+    var index = $(this).index();
+    goTo(index);
+  });
 
-  showSlide();
-};
+  $('#next').on('click', function(){
+    currentNav = parseInt($('.active').index());
 
+    if(currentNav < x-1){
+      goTo(currentNav + 1);
+    }else{
+      goTo(0);
+    }
+  });
+
+  $('#prev').on('click', function(){
+    currentNav = parseInt($('.active').index());
+    if(currentNav > 0){
+      goTo(currentNav -1);
+    }else{
+      goTo(x-1);
+    }
+  });
+  goTo(0);
+}; // End `Navigation` function
 // json for images
 var data ={
  images:[
