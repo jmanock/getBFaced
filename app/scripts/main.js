@@ -55,6 +55,8 @@ $(document).ready(function(){
   $('.submenu li a').on('click', function(e){
     e.preventDefault();
     $('.other').hide();
+    $('#navigation').empty();
+    $('#slider').empty();
     var x = this.text;
     if(x === 'Beautie' ||
        x === 'Editorial' ||
@@ -110,8 +112,9 @@ Photos = function(x){
   }); // End `Each` statment
 navigation(count);
 }; // End `Photos` function
+
 navigation = function(x){
-  console.log(x);
+
   var pictures = $('#slider').children('li');
   var navItems = $('#navigation').children('li');
   var currentNav, currentPic;
