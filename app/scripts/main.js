@@ -104,13 +104,12 @@ Photos = function(x){
 
     $('section').append('<img src=' + k + ' id='+key+'></img>');
   }); // End `Each` statment
-  
+
 }; // End `Photos` function
 var sliderInt = 0;
 showSlide = function(){
   $('#slider > img').fadeOut(500);
   $('#slider > img#' + sliderInt).fadeIn(500);
-
 };
 
 prev = function(){
@@ -129,6 +128,7 @@ next = function(){
 
   showSlide();
 };
+
 // json for images
 var data ={
  images:[
