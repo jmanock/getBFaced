@@ -56,10 +56,7 @@
       </section>
 
     <ul id='navigation'>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+
     </ul>
     </div>
     <script src='bower_components/jquery/dist/jquery.js'></script>
@@ -82,6 +79,7 @@
 
       $.each(images, function(index,image){
         $('#slider').append('<li>' +'<img src=' +image.src+'></img></li>');
+        $('#navigation').append('<li></li>');
       });// end each function
 
 
