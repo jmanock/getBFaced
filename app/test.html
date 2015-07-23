@@ -91,6 +91,7 @@
 
       $('#navigation').find('li').first().addClass('active');
       goTo = function(i){
+        console.log(i);
         $(navItems).removeClass('active');
         $('#navigation li').eq(i).addClass('active');
         pictures.fadeOut(400).eq(i).fadeIn(400);
@@ -103,7 +104,9 @@
 
       $('#next').on('click', function(){
         currenNav = parseInt($('.active').index());
-        if(currentNav < 3){
+        console.log('need to fix this bug');
+        // This needs to check all pics not hard code number
+        if(currentNav < x){
           goTo(currentNav + 1);
         }else{
           goTo(0);
@@ -114,6 +117,7 @@
         if(currentNav > 0){
           goTo(currentNav-1);
         }else{
+          // This needs to go to the last pic
           goTo(3);
         }
       });
