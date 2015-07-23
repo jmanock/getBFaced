@@ -73,8 +73,9 @@ $(document).ready(function(){
   });
 
 }); // end jQuery
-var count = 0;
+
 Photos = function(x){
+  var count = 0;
   $('img').remove();
   $('h3').remove();
   $('.container').append('<h3>'+x+'</h3>');
@@ -110,6 +111,7 @@ Photos = function(x){
 navigation(count);
 }; // End `Photos` function
 navigation = function(x){
+  console.log(x);
   var pictures = $('#slider').children('li');
   var navItems = $('#navigation').children('li');
   var currentNav, currentPic;
@@ -147,6 +149,7 @@ navigation = function(x){
   });
   goTo(0);
 }; // End `Navigation` function
+
 // json for images
 var data ={
  images:[
