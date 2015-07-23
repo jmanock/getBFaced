@@ -127,6 +127,7 @@ navigation = function(x){
     pictures.fadeOut(400).eq(i).fadeIn(400);
   };
 
+  // `Radio` buttons link to pics index
   $('#navigation li').on('click', function(){
     var index = $(this).index();
     goTo(index);
@@ -137,7 +138,9 @@ navigation = function(x){
 
     if(currentNav < x-1){
       goTo(currentNav + 1);
+      console.log(currentNav);
     }else{
+      // Dont think this is right??? 
       goTo(0);
     }
   });
@@ -146,9 +149,12 @@ navigation = function(x){
     currentNav = parseInt($('.active').index());
     if(currentNav > 0){
       goTo(currentNav -1);
+      console.log(currentNav);
     }else{
       goTo(x-1);
+      console.log('this is x - 1');
     }
+
   });
   goTo(0);
 }; // End `Navigation` function
