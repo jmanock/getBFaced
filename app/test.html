@@ -77,19 +77,21 @@
         {src:'images/mani/10.jpg'},
       ];
 
+      var count = 0;
       $.each(images, function(index,image){
+        count++;
         $('#slider').append('<li>' +'<img src=' +image.src+'></img></li>');
         $('#navigation').append('<li></li>');
+        return count;
       });// end each function
-
 
       var pictures = $('#slider').children('li');
       var navItems = $('#navigation').children('li');
       var currentNav, currentPic;
 
       $('#navigation').find('li').first().addClass('active');
+
       goTo = function(i){
-        console.log(i);
         $(navItems).removeClass('active');
         $('#navigation li').eq(i).addClass('active');
         pictures.fadeOut(400).eq(i).fadeIn(400);
@@ -101,11 +103,11 @@
       });
 
       $('#next').on('click', function(){
-        currenNav = parseInt($('.active').index());
-        console.log('need to fix this bug');
-        // This needs to check all pics not hard code number
-        if(currentNav < x){
-          goTo(currentNav + 1);
+        currentNav = parseInt($('.active').index());
+
+        if(currentNav < count){
+          goTo(currentNav+1);
+          console.log(currentNav);
         }else{
           goTo(0);
         }
@@ -115,8 +117,7 @@
         if(currentNav > 0){
           goTo(currentNav-1);
         }else{
-          // This needs to go to the last pic
-          goTo(3);
+          goTo(count-1);
         }
       });
       goTo(0);
