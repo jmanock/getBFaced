@@ -114,6 +114,8 @@ Photos = function(x){
 navigation(count);
 }; // End `Photos` function
 
+// Rethink functions to best fix the bug
+
 navigation = function(x){
 
   var currentNav = parseInt($('.active').index());
