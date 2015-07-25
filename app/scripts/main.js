@@ -84,6 +84,10 @@ Photos = function(x){
   $('img').remove();
   $('h3').remove();
   $('.container').append('<h3>'+x+'</h3>');
+  $('#navigation').children('li').remove();
+  $('#slider').children('li').remove();
+  $('button').remove();
+
 
   var images = [
     {src:'images/'+x+'/1.jpg'},
@@ -102,7 +106,47 @@ Photos = function(x){
     $('#slider').append('<li>'+'<img src='+image.src+'></img></li>');
     $('#navigation').append('<li>'+'</li>');
   });
-  $('#slider').before('<button id="next">Next</button>');
-  $('#slider').before('<button id="prev">Prev</button>');
 
+  $('#slider').before('<button id="prev">Prev</button>');
+  $('#slider').before('<button id="next">Next</button>');
+
+  Navigation();
 }; // End `Photos` function
+
+Navigation = function(){
+  var pictures = $('#slider').children('li');
+  var navItems = $('#navigation').children('li');
+  var currentNav;
+
+  $('#navigation').find('li').first().addClass('active');
+
+  goTo = function(i){
+    $(navItems).removeClass('active');
+    $('#navigation li').eq(i).addClass('active');
+    pictures.fadeOut(400).eq(i).fadeIn(400);
+  }; // End `goTo` function
+
+  $('#navigation li').on('click', function(){
+    var index = $(this).index();
+    goTo(index);
+  });
+
+  $('#next').on('click', function(){
+    currentNav = parseInt($('.active').index());
+    if(currentNav < 9){
+      goTo(currentNav + 1);
+    }else{
+      goTo(0);
+    }
+  });
+
+  $('#prev').on('click', function(){
+    currentNav = parseInt($('.active').index());
+    if(currentNav > 0){
+      goTo(currentNav -1);
+    }else{
+      goTo(9);
+    }
+  });
+  goTo(0);
+}; // End `Navigation` function
