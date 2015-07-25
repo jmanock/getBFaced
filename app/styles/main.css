@@ -181,7 +181,23 @@ h4{
 }
 button{
   background-color:transparent;
-  
   border:none;
   font-size:5em !important;
+  z-index:1;
+}
+.container > #next{
+  position:absolute;
+  top:40%;
+  right:30%;
+  color:transparent;
+}
+.container > #prev{
+  position:absolute;
+  top:40%;
+  left:30%;
+  color:transparent;
+}
+
+button:hover{
+  color:darkgray !important;
 }
