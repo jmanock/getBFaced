@@ -70,6 +70,7 @@ $(document).ready(function(){
        x === 'Acrylic' ||
        x === 'Nail Art'){
          Photos(x);
+         Something();
        }
        slideoutMenu.animate({
          left:-slideoutMenuWidth
@@ -79,7 +80,6 @@ $(document).ready(function(){
 }); // end jQuery
 
 Photos = function(x){
-
   $('img').remove();
   $('h3').remove();
   $('.container').append('<h3>'+x+'</h3>');
@@ -112,11 +112,14 @@ Photos = function(x){
     $('#navigation').append('<li></li>');
 
   }); // End `Each` statment
+
+}; // End `Photos` function
+Something = function(){
   var pictures = $('#slider').children('li');
   var navItems = $('#navigation').children('li');
   var currentNav;
 
-  $('#navigation').fild('li').addClass('active');
+  $('#navigation').find('li').first().addClass('active');
 
   goTo = function(i){
     $(navItems).removeClass('active');
@@ -131,14 +134,13 @@ Photos = function(x){
 
   $('#next').on('click', function(){
     currentNav = parseInt($('.active').index());
-    if(currentNav < 10){
+    if(currentNav < 9){
       goTo(currentNav + 1);
     }else{
       goTo(0);
     }
   });
-}; // End `Photos` function
-
+}; // End something function
 
 
 // json for images
