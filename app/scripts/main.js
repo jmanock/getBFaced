@@ -83,7 +83,7 @@ $(document).ready(function(){
 Photos = function(x){
   $('img').remove();
   $('h3').remove();
-  $('.container').append('<h3>'+x+'</h3>');
+  $('#slider').before('<h3>'+x.toUpperCase()+'</h3>');
   $('#navigation').children('li').remove();
   $('#slider').children('li').remove();
   $('button').remove();
