@@ -74,5 +74,7 @@ $(document).ready(function(){
         goTo(9);
       }
     });
+    goTo(0);
   }; // end something function
+
 }); // End jQuery
