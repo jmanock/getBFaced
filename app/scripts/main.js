@@ -56,8 +56,6 @@ $(document).ready(function(){
   $('.submenu li a').on('click', function(e){
     e.preventDefault();
     $('.other').hide();
-    $('#navigation').empty();
-    $('#slider').empty();
 
     var x = this.text;
     if(x === 'Beautie' ||
@@ -114,6 +112,8 @@ Photos = function(x){
   }); // End `Each` statment
 
 }; // End `Photos` function
+
+
 Something = function(){
   var pictures = $('#slider').children('li');
   var navItems = $('#navigation').children('li');
@@ -121,16 +121,16 @@ Something = function(){
 
   $('#navigation').find('li').first().addClass('active');
 
+  $('#navigation li').on('click', function(){
+    var index = $(this).index();
+    goTo(index);
+  });
+
   goTo = function(i){
     $(navItems).removeClass('active');
     $('#navigation li').eq(i).addClass('active');
     pictures.fadeOut(400).eq(i).fadeIn(400);
   };
-
-  $('#navigation li').on('click', function(){
-    var index = $(this).index();
-    goTo(index);
-  });
 
   $('#next').on('click', function(){
     currentNav = parseInt($('.active').index());
