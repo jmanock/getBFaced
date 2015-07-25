@@ -4,28 +4,34 @@
 
 body{
   font-family:'Lato', sans-serif;
-  background-color:gray !important;
+  background-color:gray;
 }
 
 .mobile-nav{
-  top:0;
   position:absolute;
+  top:0;
   width:35px;
   height:50px;
   cursor:pointer;
-  padding-left:12px;
+  padding-top:10px;
+  padding-left:15px;
 }
 
 header{
   background-color:#333;
+  position:absolute;
+  top:0;
+  left:0;
+  height:75px;
+  width:100%;
 }
 
 h1{
   height:50px;
-  margin-top:0 !important;
-  margin-left: 75px !important;
-  font-family:'Walter Turncoat' !important;
-  color:teal !important;
+  margin-top:10px;
+  margin-left:75px;
+  font-family:'Walter Turncoat';
+  color:teal;
 }
 
 .menu-btn span{
@@ -39,29 +45,31 @@ h1{
 /* Hamburger menu and slide out */
 .slideout-menu{
   position:fixed;
-  left: -250px;
-  width: 250px;
+  left:-250px;
+  width:250px;
   height:100%;
-  background: #333;
+  background:#333;
   margin-top:-1px;
   overflow:scroll;
 }
 
 .slideout-menu ul li{
-  border-top: 1px solid #454545;
-  border-bottom: 1px solid #151515;
+  border-top:1px solid #454545;
+  border-bottom:1px solid #151515;
+  list-style-type:none
 }
 
 .slideout-menu ul li a{
-  position: relative;
+  position:relative;
   display:block;
-  padding: 10px;
+  padding:10px;
   color:#999;
   text-decoration:none;
   font-size:1.5em;
   font-family:'Lato', sans-serif;
 }
-.slideout-menu ul li a:hover{
+
+.slidout-menu ul li a:hover{
   text-decoration:underline;
 }
 
@@ -70,32 +78,22 @@ h1{
 }
 
 h3{
-  font-family:'Lato', sans-serif !important;
-  font-size:2.5em !important;
+  font-family:'Lato', sans-serif;
+  font-size:2.5em;
   text-decoration:underline;
   text-align:center;
 }
 
 h4{
   text-align:center;
-  font-family:'Walter Turncoat' !important;
-  color:purple !important;
-}
-
-.smLinks{
-  list-style-type:none;
-  text-align:center;
-  font-size:1.5em;
-}
-
-.smLinks > li {
-  display:inline !important;
+  font-family:'Walter TurnCoat';
+  color:purple;
 }
 
 .testLinks{
   position:absolute;
   right:0;
-  top:0;
+  top:-10px;
   list-style-type:none;
   font-size:2em;
   padding-right:15px;
@@ -103,27 +101,18 @@ h4{
 }
 
 .testLinks > li{
-  display:inline;
+  display:inline-block;
 }
 
 .testLinks > li > a{
-  color:mediumorchid;
+  color:gray;
   text-decoration:none;
+  margin-right:15px;
 }
 
 .testLinks > li > a:hover{
-  color:gray !important;
-  text-decoration:none !important;
-}
-
-.other{
-  display:none;
-  border-radius:10px;
-  margin-right:10%;
-  margin-left:255px;
-  background-color:lightgray;
-  font-family:'Lato',sans-serif;
-  font-size:14pt;
+  color:mediumorchid;
+  text-decoration:none;
 }
 
 .other > p{
@@ -141,16 +130,18 @@ h4{
 .About > p{
   margin-left:16%;
 }
+
 #slider{
   margin:0 auto;
-  list-style:none;
+  list-style-type:none;
   position:relative;
   width:500px;
   height:350px;
-  padding: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0, 0.4);
+  padding:10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
   border-radius:10px;
 }
+
 #slider img{
   position:absolute;
   top:25px;
@@ -159,39 +150,40 @@ h4{
   height:300px;
   border-radius:10px;
 }
+
 #navigation{
   margin-left:350px;
-  list-style:none;
+  list-style-type:none;
   padding:0px;
   margin-bottom:8px;
-
 }
+
 #navigation li{
   display:inline-block;
   border-radius:10px;
   width:10px;
   height:10px;
-  margin: 0 5px;
+  margin:0 5px;
   border:2px solid #2284a1;
   background:white;
   cursor:pointer;
 }
-#navigation li.active{
-  background:#2284a1;
-}
+
 button{
   background-color:transparent;
   border:none;
-  font-size:5em !important;
+  font-size:5em;
   z-index:1;
 }
-.container > #next{
+
+#next{
   position:absolute;
   top:40%;
   right:30%;
   color:transparent;
 }
-.container > #prev{
+
+#prev{
   position:absolute;
   top:40%;
   left:30%;
@@ -199,5 +191,5 @@ button{
 }
 
 button:hover{
-  color:darkgray !important;
+  color:darkgray;
 }
