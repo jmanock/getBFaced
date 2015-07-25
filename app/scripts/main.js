@@ -107,8 +107,8 @@ Photos = function(x){
     $('#navigation').append('<li>'+'</li>');
   });
 
-  $('#slider').before('<a href="#" id="next"><img src='+images/next.png+'></img></a>');
-  $('#slider').before('<a href="#" id="prev"><img src='+images/prev.png+'></img></a>');
+  $('#slider').before('<button id="prev" class="fa fa-chevron-left"></button>');
+  $('#slider').before('<button id="next" class="fa fa-chevron-right"></button>');
 
   Navigation();
 }; // End `Photos` function

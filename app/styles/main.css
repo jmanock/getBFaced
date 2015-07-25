@@ -180,6 +180,8 @@ h4{
   background:#2284a1;
 }
 button{
-  background-color:black;
-  color:white !important;
+  background-color:transparent;
+  
+  border:none;
+  font-size:5em !important;
 }
