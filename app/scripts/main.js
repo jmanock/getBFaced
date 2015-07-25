@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   // Slide out menu
   var slideoutMenu = $('.slideout-menu');
   var slideoutMenuWidth = $('.slideout-menu').width();
@@ -78,7 +79,7 @@ $(document).ready(function(){
 }); // end jQuery
 
 Photos = function(x){
-  var count = 0;
+
   $('img').remove();
   $('h3').remove();
   $('.container').append('<h3>'+x+'</h3>');
@@ -109,61 +110,37 @@ Photos = function(x){
 
     $('#slider').append('<li>'+'<img src=' + k + '></img></li>');
     $('#navigation').append('<li></li>');
-    count++;
+
   }); // End `Each` statment
-navigation(count);
-}; // End `Photos` function
+  var pictures = $('#slider').children('li');
+  var navItems = $('#navigation').children('li');
+  var currentNav;
 
-// Rethink functions to best fix the bug
+  $('#navigation').fild('li').addClass('active');
 
-navigation = function(x){
+  goTo = function(i){
+    $(navItems).removeClass('active');
+    $('#navigation li').eq(i).addClass('active');
+    pictures.fadeOut(400).eq(i).fadeIn(400);
+  };
 
-  var currentNav = parseInt($('.active').index());
-  currentNav = 0;
-  goTo(0);
-  $('#navigation').find('li').first().addClass('active');
-
-  // `Radio` buttons link to pics index
   $('#navigation li').on('click', function(){
     var index = $(this).index();
     goTo(index);
   });
 
   $('#next').on('click', function(){
-    // currentNav = parseInt($('.active').index());
-    if(currentNav < x -1){
-      currentNav++;
-      goTo(currentNav);
-
+    currentNav = parseInt($('.active').index());
+    if(currentNav < 10){
+      goTo(currentNav + 1);
     }else{
-      currentNav = 0;
       goTo(0);
     }
   });
+}; // End `Photos` function
 
-  $('#prev').on('click', function(){
-    currentNav = parseInt($('.active').index());
 
-    // if(currentNav > 0){
-    //   goTo(currentNav -1);
-    //   console.log(currentNav);
-    // }else{
-    //   goTo(9);
-    //   console.log('this is x - 1');
-    // }
 
-  });
-
-}; // End `Navigation` function
-goTo = function(i){
-  // This is not clearing when changeing sub menus
-  console.log(i);
-  var navItems = $('#navigation').children('li');
-  var pictures = $('#slider').children('li');
-  $(navItems).removeClass('active');
-  $('#navigation li').eq(i).addClass('active');
-  pictures.fadeOut(400).eq(i).fadeIn(400);
-};
 // json for images
 var data ={
  images:[
