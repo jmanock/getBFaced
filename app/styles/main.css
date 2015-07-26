@@ -159,7 +159,7 @@ h4{
 }
 
 #navigation{
-  margin-left:350px;
+  margin-left:450px;
   list-style-type:none;
   padding:0px;
   margin-bottom:8px;
@@ -170,7 +170,8 @@ h4{
   border-radius:10px;
   width:10px;
   height:10px;
-  margin:0 5px;
+  margin-top:25px;
+  margin-right:10px;
   border:2px solid #2284a1;
   background:white;
   cursor:pointer;
@@ -178,7 +179,6 @@ h4{
 
 button{
   background-color:transparent;
-  border:none;
   font-size:5em !important;
   cursor:pointer;
   z-index:1;
@@ -199,5 +199,5 @@ button{
 }
 
 button:hover{
-  color:darkgray;
+  color:darkgray !important;
 }
