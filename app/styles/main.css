@@ -78,10 +78,10 @@ h1{
 }
 
 h3{
-  font-family:'Lato', sans-serif;
   font-size:2.5em;
-  text-decoration:underline;
+  
   text-align:center;
+  margin-top:-7px;
 }
 
 h4{
@@ -90,6 +90,7 @@ h4{
   color:purple;
 }
 
+/* Header bar links */
 .testLinks{
   position:absolute;
   right:0;
@@ -115,6 +116,11 @@ h4{
   text-decoration:none;
 }
 
+/* Content */
+.About, .Resume{
+  display:none;
+}
+
 .other > p{
   margin-left:10px;
   margin-right:10px;
@@ -131,10 +137,12 @@ h4{
   margin-left:16%;
 }
 
+/* Image slider */
 #slider{
   margin:0 auto;
   list-style-type:none;
   position:relative;
+  top:75px;
   width:500px;
   height:350px;
   padding:10px;
