@@ -79,7 +79,6 @@ h1{
 
 h3{
   font-size:2.5em;
-  
   text-align:center;
   margin-top:-7px;
 }
@@ -180,22 +179,24 @@ h4{
 button{
   background-color:transparent;
   border:none;
-  font-size:5em;
+  font-size:5em !important;
+  cursor:pointer;
   z-index:1;
+  
 }
 
 #next{
   position:absolute;
   top:40%;
   right:30%;
-  color:transparent;
+  color:black;
 }
 
 #prev{
   position:absolute;
   top:40%;
   left:30%;
-  color:transparent;
+  color:black;
 }
 
 button:hover{
