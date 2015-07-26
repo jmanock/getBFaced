@@ -59,31 +59,20 @@ $(document).ready(function(){
     $('.other').hide();
 
     var x = this.text;
+    $('.heading').append('<h3>'+x+'</h3>');
+    x = x.toLowerCase();
+    Photos(x);
 
-    if(x === 'Beautie' ||
-       x === 'Editorial' ||
-       x === 'Fantasy' ||
-       x === 'Special-Fx' ||
-       x === 'Men' ||
-       x === 'Women' ||
-       x ==='Mani-Pedi' ||
-       x === 'Acrylic' ||
-       x === 'Art'){
-         x = x.toLowerCase();
-         Photos(x);
-
-       }
-       slideoutMenu.animate({
-         left:-slideoutMenuWidth
-       }, 250);
+    slideoutMenu.animate({
+      left:-slideoutMenuWidth
+    },250);
   });
 
 }); // end jQuery
 
 Photos = function(x){
   $('img').remove();
-  $('h3').remove();
-  $('#slider').before('<h3>'+x.toUpperCase()+'</h3>');
+
   $('#navigation').children('li').remove();
   $('#slider').children('li').remove();
   $('button').remove();
