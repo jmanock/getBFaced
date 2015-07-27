@@ -167,7 +167,8 @@ h4{
 }
 
 #navigation li{
-  cursor:pointer !important;
+  z-index:99;
+  cursor:pointer;
   display:inline-block;
   border-radius:10px;
   width:10px;
