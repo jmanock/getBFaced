@@ -61,11 +61,32 @@ $(document).ready(function(){
     var x = this.text;
     $('footer').before('<h3>'+x+'</h3>');
     x = x.toLowerCase();
-    console.log(x);
+    Photos(x);
 
     slideoutMenu.animate({
       left:-slideoutMenuWidth
     },250);
   });
-
 }); // end jQuery
+
+// `Photos` function
+Photos = function(x){
+  $('img').remove();
+  $('#navigation li').remove();
+  var images = [
+    {src: 'images/'+x+'/1.jpg'},
+    {src: 'images/'+x+'/2.jpg'},
+    {src: 'images/'+x+'/3.jpg'},
+    {src: 'images/'+x+'/4.jpg'},
+    {src: 'images/'+x+'/5.jpg'},
+    {src: 'images/'+x+'/6.jpg'},
+    {src: 'images/'+x+'/7.jpg'},
+    {src: 'images/'+x+'/8.jpg'},
+    {src: 'images/'+x+'/9.jpg'},
+    {src: 'images/'+x+'/10.jpg'}
+  ];
+  $.each(images, function(index, image){
+    $('#slider').append('<li>'+'<img src='+image.src+'></img></li>');
+    $('#navigation').append('<li></li>');
+  });
+};
