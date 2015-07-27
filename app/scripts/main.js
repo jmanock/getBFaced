@@ -91,4 +91,24 @@ Photos = function(x){
   });
   $('#slider').before('<button id="next" class="fa fa-chevron-right">'+'</button>');
   $('#slider').before('<button id="prev" class="fa fa-chevron-left">'+'</button>');
+  Navigation();
+};
+
+Navigation = function(){
+  var pictures = $('#slider').children('li');
+  var navItems = $('#navigation').children('li');
+  var currentNav;
+
+  $('#navigation').find('li').first().addClass('active');
+
+  goTo = function(i){
+    $(navItems).removeClass('active');
+    $('#navigation li').eq(i).addClass('active');
+    pictures.fadeOut(400).eq(i).fadeIn(400);
+  };
+
+  $('#navigation li').on('click', function(){
+    var index = $(this).index();
+    goTo(index);
+  });
 };
