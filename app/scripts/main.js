@@ -27,10 +27,9 @@ $(document).ready(function(){
     $('.other').hide();
     $('img').remove();
     $('h3').remove();
-
     var x = this.text;
+    $('.container').append('<h3>'+x+'</h3>');
 
-    $('section').append('<h3>'+ x + '</h3>');
     $('.'+x).show();
 
     slideoutMenu.animate({
@@ -57,9 +56,9 @@ $(document).ready(function(){
   $('.submenu li a').on('click', function(e){
     e.preventDefault();
     $('.other').hide();
-
+    $('h3').remove();
     var x = this.text;
-
+    $('.container').append('<h3>'+x+'</h3>');
     x = x.toLowerCase();
     Photos(x);
 
