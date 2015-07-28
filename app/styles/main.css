@@ -192,13 +192,33 @@ h3{
 }
 
 .container{
-  margin-top:10%;
+  margin-top:15%;
 }
+
 .container h3{
   position:absolute;
   top:17%;
   left:44%;
 }
+
+.fa{
+  cursor:pointer;
+  position:absolute;
+  color:darkgray;
+  z-index:99;
+}
+#next{
+  cursor:pointer;
+  top:40%;
+  right:30%;
+
+}
+#prev{
+
+  top:40%;
+  left:30%;
+}
+
 footer{
   font-size:1.5em;
   color:purple;
