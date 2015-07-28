@@ -24,7 +24,6 @@ $(document).ready(function(){
   $('.menu').on('click',function(e){
     e.preventDefault();
 
-    $('.splash').remove();
     $('.other').hide();
     $('img').remove();
     $('h3').remove();
@@ -56,6 +55,7 @@ $(document).ready(function(){
   // Links to show `Pics`
   $('.submenu li a').on('click', function(e){
     e.preventDefault();
+    
     $('.other').hide();
     $('h3').remove();
     var x = this.text;
