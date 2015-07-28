@@ -90,8 +90,8 @@ Photos = function(x){
     $('#slider').append('<li>'+'<img src='+image.src+'></img></li>');
     $('#navigation').append('<li></li>');
   });
-  $('#slider').before('<button id="next" class="fa fa-chevron-right">'+'</button>');
   $('#slider').before('<button id="prev" class="fa fa-chevron-left">'+'</button>');
+  $('#slider').before('<button id="next" class="fa fa-chevron-right">'+'</button>');
   Navigation();
 };
 
