@@ -138,6 +138,7 @@ footer{
 
 /* Image slider */
 #slider{
+  display:none;
   margin-top:125px;
   margin-left:300px;
   list-style:none;
@@ -188,3 +189,17 @@ img{
   top:17%;
   left:44%;
 }
+
+/*.splash{
+  background-image:url(../images/blackNwhite.jpg);
+  background-size:620px 400px;
+  background-repeat:no-repeat;
+}
+.splash > h2{
+  color:white;
+  font-size:3.3em;
+  position:absolute;
+  background:transparent;
+  right:0;
+  top:100px;
+}*/

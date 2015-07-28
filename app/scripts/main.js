@@ -24,6 +24,7 @@ $(document).ready(function(){
   $('.menu').on('click',function(e){
     e.preventDefault();
 
+    $('.splash').remove();
     $('.other').hide();
     $('img').remove();
     $('h3').remove();
