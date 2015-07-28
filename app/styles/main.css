@@ -142,17 +142,22 @@ footer{
   margin-left:300px;
   list-style:none;
   position:relative;
-  width: 600px;
+  width:600px;
   height:300px;
   padding:10px;
   border-radius:10px;
   box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
 
+img{
+  width:250px;
+  height:250px;
+}
+
 #slider img{
   position:absolute;
-  top:10px;
-  left:10px;
+  top:35px;
+  left:175px;
   border-radius:10px;
 }
 
