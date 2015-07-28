@@ -23,10 +23,11 @@ $(document).ready(function(){
   // `Menu` click
   $('.menu').on('click',function(e){
     e.preventDefault();
-
+    $('#splash').remove();
     $('.other').hide();
     $('img').remove();
     $('h3').remove();
+
     var x = this.text;
     $('.container').append('<h3>'+x+'</h3>');
 
@@ -55,9 +56,10 @@ $(document).ready(function(){
   // Links to show `Pics`
   $('.submenu li a').on('click', function(e){
     e.preventDefault();
-    
+    $('#splash').hide();
     $('.other').hide();
     $('h3').remove();
+    $('#slider').toggle();
     var x = this.text;
     $('.container').append('<h3>'+x+'</h3>');
     x = x.toLowerCase();
@@ -74,7 +76,7 @@ Photos = function(x){
   $('img').remove();
   $('#navigation').children('li').remove();
   $('#slider').children('li').remove();
-  $('button').remove();
+  $('.fa').remove();
   var images = [
     {src: 'images/'+x+'/1.jpg'},
     {src: 'images/'+x+'/2.jpg'},

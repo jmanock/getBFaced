@@ -119,7 +119,7 @@ h3{
   height:300px;
   width:600px;
   margin-left:300px;
-  opacity:0.9;  
+  opacity:0.9;
 }
 
 #splash p{
@@ -191,6 +191,9 @@ h3{
   background:#2284a1;
 }
 
+.container{
+  margin-top:10%;
+}
 .container h3{
   position:absolute;
   top:17%;
