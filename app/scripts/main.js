@@ -29,7 +29,7 @@ $(document).ready(function(){
     $('h3').remove();
 
     var x = this.text;
-    $('.container').append('<h3>'+x+'</h3>');
+    $('.container').append('<h3 class="title">'+x+'</h3>');
 
     $('.'+x).show();
 
@@ -61,7 +61,7 @@ $(document).ready(function(){
     $('h3').remove();
     $('#slider').toggle();
     var x = this.text;
-    $('.container').append('<h3>'+x+'</h3>');
+    $('.container').append('<h3 class="title">'+x+'</h3>');
     x = x.toLowerCase();
     Photos(x);
 
@@ -93,8 +93,8 @@ Photos = function(x){
     $('#slider').append('<li>'+'<img src='+image.src+'></img></li>');
     $('#navigation').append('<li></li>');
   });
-  $('#slider').before('<span id="prev" class="fa fa-chevron-left fa-3x">'+'</span>');
-  $('#slider').before('<span id="next" class="fa fa-chevron-right fa-3x">'+'</span>');
+  $('#slider').before('<span id="prev" class="fa fa-chevron-left fa-4x">'+'</span>');
+  $('#slider').before('<span id="next" class="fa fa-chevron-right fa-4x">'+'</span>');
   Navigation();
 };
 
