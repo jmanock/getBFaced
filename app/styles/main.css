@@ -8,12 +8,13 @@ body{
 }
 
 .mobile-nav{
+  cursor:pointer;
   position:absolute;
   top:0;
-  width:35pt;
-  height:50pt;
-  padding-top:10pt;
-  padding-left:15pt;
+  width:3em;
+  height:4em;
+  padding-top:0.8em;
+  padding-left:1em;
 }
 
 header{
@@ -21,15 +22,15 @@ header{
   position:absolute;
   top:0;
   left:0;
-  height:60pt;
+  height:5em;
   width:100%;
 }
 
 h1{
-  height:50pt;
+  height:1.4em;
   font-size:2.5em;
-  margin-top:10pt;
-  margin-left:75pt;
+  margin-top:0.3em;
+  margin-left:2.5em;
   font-family:'Walter Turncoat';
   color:teal;
 }
@@ -37,36 +38,37 @@ h1{
 /*Hamburger icon*/
 .menu-btn span{
   display:block;
-  width:30pt;
-  height:5pt;
-  margin-top:8pt;
+  width:2.5em;
+  height:0.6em;
+  margin-top:0.5em;
   margin-right:0;
   margin-bottom:0;
   margin-left:0;
   background-color:gray;
-  cursor:pointer;
 }
 
 /*Slideout Menu*/
 .slideout-menu{
   position:fixed;
-  left:-250pt;
-  width:200pt;
+  top:5.0em;
+  margin-left:-1em;
+  left:-10em;
+  width:17em;
   height:100%;
   background:#333;
   overflow:scroll;
 }
 
 .slideout-menu ul li{
-  border-top:1pt solid #454545;
-  border-bottom:1pt solid #151515;
+  border-top:1px solid #454545;
+  border-bottom:1px solid #151515;
   list-style-type:none;
 }
 
 .slideout-menu ul li a{
   position:relative;
   display:block;
-  padding:10pt;
+  padding:0.7em;
   color:#999;
   text-decoration:none;
   font-size:1.5em;
@@ -82,14 +84,14 @@ h1{
   font-size:2.5em;
   position:absolute;
   right:0;
-  top:-10pt;
+  top:-0.5em;
   list-style-type:none;
   padding-right:0;
 }
 
 .navLinks > li{
   display:inline-block;
-  padding-right:10pt;
+  padding-right:0.4em;
 }
 
 .navLinks > li > a{
@@ -107,13 +109,12 @@ h1{
 }
 
 .container{
-  margin-top:65pt;
-  margin-left:200pt;
+  margin-top:6em;
+  margin-left:18em;
 }
 
 /*Footer*/
 footer{
-  
   font-family:'Walter Turncoat';
   font-size:1.5em;
   color:purple;
