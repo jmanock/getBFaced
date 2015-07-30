@@ -52,7 +52,7 @@ h1{
   position:fixed;
   top:5.0em;
   margin-left:-1em;
-  left:-10em;
+  left:-100em;
   width:17em;
   height:100%;
   background:#333;
@@ -115,12 +115,33 @@ h1{
 }
 
 .About{
-  background-color:white;
   
+  margin-top:-3em;
+}
+.About > .img{
+  background:url(../images/pinUp.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  overflow:hidden;
+  border-radius:50px;
+  width:100px;
+  height:100px;
+}
+
+.About > p{
+  margin-left:0.7em;
+}
+
+.title{
+  font-size:2em;
+  width:5em;
+  height:3em;
+  margin-left:4em;
 }
 /*Footer*/
 footer{
   font-family:'Walter Turncoat';
   font-size:1.5em;
   color:purple;
+  margin-left:4em;
 }

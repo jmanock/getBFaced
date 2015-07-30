@@ -29,7 +29,7 @@ $(document).ready(function(){
     $('h3').remove();
 
     var x = this.text;
-    $('.container').append('<h3 class="title">'+x+'</h3>');
+    $('.title').append('<h3>'+x+'</h3>');
 
     $('.'+x).show();
 
@@ -61,7 +61,7 @@ $(document).ready(function(){
     $('h3').remove();
     $('#slider').toggle();
     var x = this.text;
-    $('.container').append('<h3 class="title">'+x+'</h3>');
+    $('.title').append('<h3>'+x+'</h3>');
     x = x.toLowerCase();
     Photos(x);
 
