@@ -17,7 +17,6 @@ body{
 }
 
 header{
-  border:2px solid red;
   background-color:#333;
   position:absolute;
   top:0;
@@ -103,18 +102,19 @@ h1{
 }
 
 /*Content*/
- .Resume{
+.About, .Resume{
   display:none;
 }
 
 .container{
   margin-top:65pt;
   margin-left:200pt;
-
 }
+
+/*Footer*/
 footer{
-  text-align:center;
+  
   font-family:'Walter Turncoat';
-  font-size:2em;
+  font-size:1.5em;
   color:purple;
 }
