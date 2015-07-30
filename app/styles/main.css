@@ -7,84 +7,90 @@ body{
   background-color:gray;
 }
 
-/*logo*/
 .mobile-nav{
   position:absolute;
   top:0;
-  width:35px;
-  height:50px;
-  cursor:pointer;
-  padding-top:10px;
-  padding-left:15px;
+  width:35pt;
+  height:50pt;
+  padding-top:10pt;
+  padding-left:15pt;
 }
 
 header{
+  border:2px solid red;
   background-color:#333;
   position:absolute;
   top:0;
   left:0;
-  height:75px;
+  height:60pt;
   width:100%;
 }
 
 h1{
-  height:50px;
-  margin-top:10px;
-  margin-left:75px;
+  height:50pt;
+  font-size:2.5em;
+  margin-top:10pt;
+  margin-left:75pt;
   font-family:'Walter Turncoat';
   color:teal;
 }
 
-/*Hamburger menu and Slide Out*/
+/*Hamburger icon*/
 .menu-btn span{
   display:block;
-  width:30px;
-  height:5px;
-  margin:9px 0;
+  width:30pt;
+  height:5pt;
+  margin-top:8pt;
+  margin-right:0;
+  margin-bottom:0;
+  margin-left:0;
   background-color:gray;
+  cursor:pointer;
 }
 
+/*Slideout Menu*/
 .slideout-menu{
   position:fixed;
-  left:-250px;
-  width:250px;
+  left:-250pt;
+  width:200pt;
   height:100%;
   background:#333;
-  margin-top:-1px;
   overflow:scroll;
 }
 
 .slideout-menu ul li{
-  border-top:1px solid #454545;
-  border-bottom:1px solid #151515;
-  list-style:none;
+  border-top:1pt solid #454545;
+  border-bottom:1pt solid #151515;
+  list-style-type:none;
 }
 
 .slideout-menu ul li a{
   position:relative;
   display:block;
-  padding:10px;
+  padding:10pt;
   color:#999;
   text-decoration:none;
   font-size:1.5em;
   font-family:'Lato', sans-serif;
 }
 
-.slidout-menu ul li a:hover{
+.slideout-menu ul li a:hover{
   text-decoration:underline;
 }
 
-/*navLinks*/
+/*Contact Links*/
 .navLinks{
   font-size:2.5em;
   position:absolute;
-  top:-45pt;
-  right:10px;
+  right:0;
+  top:-10pt;
+  list-style-type:none;
+  padding-right:0;
 }
 
 .navLinks > li{
   display:inline-block;
-  padding-right:30pt;
+  padding-right:10pt;
 }
 
 .navLinks > li > a{
@@ -95,132 +101,20 @@ h1{
 .navLinks > li > a:hover{
   color:mediumorchid;
 }
-/*content*/
-.About, .Resume{
+
+/*Content*/
+ .Resume{
   display:none;
 }
 
-#splash{
-  margin-top:10%;
-  background-image:url(../images/blackNwhite.jpg);
-  background-repeat:no-repeat;
-  background-size:620px 400px;
-  border-radius:20px;
-  height:300px;
-  width:600px;
-  margin-left:300px;
-  opacity:0.9;
-}
-
-#splash p{
-  color:purple;
-  background-color:transparent;
-  font-size:2.5em;
-  position:relative;
-  margin-left:410px;
-  padding-top:200px;
-  font-family:'Walter Turncoat';
-}
-
-.other > p{
-  margin-left:10px;
-  margin-right:10px;
-}
-
-.About{
-  background-image:url(../images/pinUp.jpg);
-  background-size:15%;
-  background-repeat:no-repeat;
-  background-color:lightgray;
-}
-
-.About > p{
-  margin-left:16%;
-}
-
-/*Image slider*/
-#slider{
-  display:none;
-  margin-top:125px;
-  margin-left:300px;
-  list-style:none;
-  position:relative;
-  width:600px;
-  height:300px;
-  padding:10px;
-  border-radius:10px;
-  box-shadow:0 0 20px rgba(0, 0, 0, 0.4);
-}
-
-#slider img{
-  position:absolute;
-  top:35px;
-  left:175px;
-  border-radius:10px;
-}
-
-/*navigation bullets*/
-#navigation{
-  margin-left:450px;
-  list-style:none;
-  padding:0px;
-  margin-bottom:8px;
-}
-
-#navigation li{
-  display:inline-block;
-  border-radius:10px;
-  width:10px;
-  height:10px;
-  margin:0 5px;
-  border:2px solid #2284a1;
-  background:white;
-  cursor:pointer;
-}
-
-#navigation li.active{
-  background:#2284a1;
-}
-
-/*Containter*/
 .container{
-  margin-top:15%;
-}
+  margin-top:65pt;
+  margin-left:200pt;
 
-.container h3{
-  position:absolute;
-  top:17%;
-  left:44%;
 }
-
-/*Contact links*/
-.fa{
-  cursor:pointer;
-  position:absolute;
-  color:darkgray;
-  z-index:99;
-}
-
-/*Buttons*/
-#next{
-  cursor:pointer;
-  top:40%;
-  right:30%;
-}
-
-#prev{
-  top:40%;
-  left:30%;
-}
-
-/*Footer*/
 footer{
-  font-size:1.5em;
-  color:purple;
-  font-family:'Walter TurnCoat';
   text-align:center;
-}
-
-.title{
-  font-size:3em;
+  font-family:'Walter Turncoat';
+  font-size:2em;
+  color:purple;
 }
