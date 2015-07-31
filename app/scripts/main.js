@@ -23,6 +23,8 @@ $(document).ready(function(){
   // `Menu` click
   $('.menu').on('click',function(e){
     e.preventDefault();
+    $('#navigation').children('li').remove();
+    $('#slider').hide();
     $('#splash').remove();
     $('.other').hide();
     $('img').remove();
