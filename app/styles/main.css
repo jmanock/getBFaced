@@ -147,6 +147,81 @@ h1{
   margin-left:6em;
 }
 
+/*Photos*/
+#slider{
+  margin:0 auto;
+  list-style:none;
+  position:relative;
+  margin-left:0;
+  width:40em;
+  height:20em;
+  padding:10px;
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
+  border-radius:10px;
+}
+
+
+#slider img{
+  position:absolute;
+  border-radius:10px;
+  top:3.5em;
+  margin-left:12em;
+  height:15em;
+  width:15em;
+}
+
+/*Navigation Buttons*/
+#navigation{
+  margin-left:12em;
+  list-style:none;
+  padding:0;
+  margin-bottom:1em;
+}
+
+#navigation li{
+  display:inline-block;
+  border-radius:10px;
+  width:0.7em;
+  height:0.7em;
+  border:2px solid #2284a1;
+  margin-right:0.5em;
+  background:white;
+  cursor:pointer;
+}
+
+#navigation li.active{
+  background:#2284a1;
+}
+
+/*Arrow Buttons*/
+.button{
+  font-size:5em !important;
+  cursor:pointer;
+  z-index:2;
+}
+
+#next{
+  color:transparent;
+  position:absolute;
+  top:4em;
+  right:4em;
+}
+
+#next:hover{
+  color:lightgray;
+}
+
+#prev{
+  color:transparent;
+  position:absolute;
+  top:4em;
+  left:4em;
+}
+
+#prev:hover{
+  color:lightgray;
+}
+
 /*Footer*/
 footer{
   font-family:'Walter Turncoat';

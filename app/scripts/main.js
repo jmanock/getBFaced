@@ -76,7 +76,7 @@ Photos = function(x){
   $('img').remove();
   $('#navigation').children('li').remove();
   $('#slider').children('li').remove();
-  $('.fa').remove();
+  $('.button').remove();
   var images = [
     {src: 'images/'+x+'/1.jpg'},
     {src: 'images/'+x+'/2.jpg'},
@@ -93,8 +93,8 @@ Photos = function(x){
     $('#slider').append('<li>'+'<img src='+image.src+'></img></li>');
     $('#navigation').append('<li></li>');
   });
-  $('#slider').before('<span id="prev" class="fa fa-chevron-left fa-4x">'+'</span>');
-  $('#slider').before('<span id="next" class="fa fa-chevron-right fa-4x">'+'</span>');
+  $('#slider').before('<span id="prev" class="button fa fa-chevron-left fa-4x">'+'</span>');
+  $('#slider').before('<span id="next" class="button fa fa-chevron-right fa-4x">'+'</span>');
   Navigation();
 };
 
