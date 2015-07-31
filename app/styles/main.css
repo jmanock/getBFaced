@@ -149,6 +149,7 @@ h1{
 
 /*Photos*/
 #slider{
+  display:none;
   margin:0 auto;
   list-style:none;
   position:relative;
@@ -159,7 +160,6 @@ h1{
   box-shadow:0 0 20px rgba(0,0,0,0.4);
   border-radius:10px;
 }
-
 
 #slider img{
   position:absolute;
@@ -222,6 +222,23 @@ h1{
   color:lightgray;
 }
 
+/*Splash*/
+#splash{
+  background-image:url(../images/blackNwhite.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  width:30em;
+  height:20em;
+  border-radius:10px;
+}
+
+#splash > p{
+  position:absolute;
+  color:mediumorchid;
+  top:1.5em;
+  left:9em;
+  font-size:3em;
+}
 /*Footer*/
 footer{
   font-family:'Walter Turncoat';
