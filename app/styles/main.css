@@ -126,14 +126,27 @@ h1{
 }
 
 .About > p{
+  height:8em;
   background-color:lightgray;
+  border-radius:10px;
+  padding-left:1em;
+  padding-top:1em;
 }
+
+.Resume{
+  background-color:lightgray;
+  padding-left:1em;
+  border-radius:10px;
+  margin-top:-3em;
+}
+
 .title{
   font-size:2em;
   width:5em;
   height:3em;
-  margin-left:4em;
+  margin-left:6em;
 }
+
 /*Footer*/
 footer{
   font-family:'Walter Turncoat';
