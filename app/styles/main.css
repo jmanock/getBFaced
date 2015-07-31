@@ -13,7 +13,7 @@ body{
   top:0;
   width:3em;
   height:4em;
-  padding-top:0.8em;
+  padding-top:1.3em;
   padding-left:1em;
 }
 
@@ -39,11 +39,8 @@ h1{
 .menu-btn span{
   display:block;
   width:2.5em;
-  height:0.6em;
+  height:0.4em;
   margin-top:0.5em;
-  margin-right:0;
-  margin-bottom:0;
-  margin-left:0;
   background-color:gray;
 }
 
@@ -115,23 +112,22 @@ h1{
 }
 
 .About{
-  
   margin-top:-3em;
 }
+
 .About > .img{
   background:url(../images/pinUp.jpg);
   background-repeat:no-repeat;
   background-size:cover;
   overflow:hidden;
-  border-radius:50px;
-  width:100px;
-  height:100px;
+  border-radius:5em;
+  width:10em;
+  height:10em;
 }
 
 .About > p{
-  margin-left:0.7em;
+  background-color:lightgray;
 }
-
 .title{
   font-size:2em;
   width:5em;
