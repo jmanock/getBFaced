@@ -27,8 +27,9 @@ a{
   text-decoration:none;
 }
 .hero-background{
-  background:url(../images/blackNwhite.jpg);
+  background:url(../images/blackNwhite.jpg) no-repeat center fixed;
   padding:1px;
+
   background-size:cover;
   width:100%;
   height:100vh;
@@ -51,6 +52,7 @@ a{
   top:40%;
   display:inline;
   width:60%;
+  border-radius:20px;
 }
 .title h1{
   margin-bottom:10px;
@@ -94,21 +96,18 @@ nav li a{
 nav li a:hover{
   text-decoration:underline;
 }
-.about .intro{
-  width:80%;
-  padding:0 5% 5% 0;
+.about{
+  padding-top:2%;
+  margin-bottom:2%;
+  padding-bottom:8%;
+}
+.about h2{
+  padding-top:10%;
+}
+.profilePic{
   float:left;
-}
-.intro h3{
-  font-size:30px;
-  font-weight:700;
-  text-transform:none;
-}
-.intro .image{
-  text-align:center;
-}
-.intro img{
-  border:1px solid black;
-  height:250px;
+  width:30%;
   border-radius:50%;
+  border:solid 5px #ffc14f;
+  margin:2%;
 }
