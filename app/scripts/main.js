@@ -23,14 +23,16 @@ $(document).ready(function(){
   // `Menu` click
   $('.menu').on('click',function(e){
     e.preventDefault();
-
+    $('#navigation').children('li').remove();
+    $('#slider').hide();
+    $('#splash').remove();
     $('.other').hide();
     $('img').remove();
     $('h3').remove();
 
     var x = this.text;
+    $('.title').append('<h3>'+x+'</h3>');
 
-    $('section').append('<h3>'+ x + '</h3>');
     $('.'+x).show();
 
     slideoutMenu.animate({
@@ -56,62 +58,47 @@ $(document).ready(function(){
   // Links to show `Pics`
   $('.submenu li a').on('click', function(e){
     e.preventDefault();
+    $('#splash').hide();
     $('.other').hide();
-
+    $('h3').remove();
+    $('#slider').toggle();
     var x = this.text;
+    $('.title').append('<h3>'+x+'</h3>');
+    x = x.toLowerCase();
+    Photos(x);
 
-    if(x === 'Beautie' ||
-       x === 'Editorial' ||
-       x === 'Fantasy' ||
-       x === 'Special-Fx' ||
-       x === 'Men' ||
-       x === 'Women' ||
-       x ==='Mani-Pedi' ||
-       x === 'Acrylic' ||
-       x === 'Art'){
-         x = x.toLowerCase();
-         Photos(x);
-
-       }
-       slideoutMenu.animate({
-         left:-slideoutMenuWidth
-       }, 250);
+    slideoutMenu.animate({
+      left:-slideoutMenuWidth
+    },250);
   });
-
 }); // end jQuery
 
+// `Photos` function
 Photos = function(x){
   $('img').remove();
-  $('h3').remove();
-  $('#slider').before('<h3>'+x.toUpperCase()+'</h3>');
   $('#navigation').children('li').remove();
   $('#slider').children('li').remove();
-  $('button').remove();
-
-
+  $('.button').remove();
   var images = [
-    {src:'images/'+x+'/1.jpg'},
-    {src:'images/'+x+'/2.jpg'},
-    {src:'images/'+x+'/3.jpg'},
-    {src:'images/'+x+'/4.jpg'},
-    {src:'images/'+x+'/5.jpg'},
-    {src:'images/'+x+'/6.jpg'},
-    {src:'images/'+x+'/7.jpg'},
-    {src:'images/'+x+'/8.jpg'},
-    {src:'images/'+x+'/9.jpg'},
-    {src:'images/'+x+'/10.jpg'}
+    {src: 'images/'+x+'/1.jpg'},
+    {src: 'images/'+x+'/2.jpg'},
+    {src: 'images/'+x+'/3.jpg'},
+    {src: 'images/'+x+'/4.jpg'},
+    {src: 'images/'+x+'/5.jpg'},
+    {src: 'images/'+x+'/6.jpg'},
+    {src: 'images/'+x+'/7.jpg'},
+    {src: 'images/'+x+'/8.jpg'},
+    {src: 'images/'+x+'/9.jpg'},
+    {src: 'images/'+x+'/10.jpg'}
   ];
-
   $.each(images, function(index, image){
     $('#slider').append('<li>'+'<img src='+image.src+'></img></li>');
-    $('#navigation').append('<li>'+'</li>');
+    $('#navigation').append('<li></li>');
   });
-
-  $('#slider').before('<button id="prev" class="fa fa-chevron-left"></button>');
-  $('#slider').before('<button id="next" class="fa fa-chevron-right"></button>');
-
+  $('#slider').before('<span id="prev" class="button fa fa-chevron-left fa-4x">'+'</span>');
+  $('#slider').before('<span id="next" class="button fa fa-chevron-right fa-4x">'+'</span>');
   Navigation();
-}; // End `Photos` function
+};
 
 Navigation = function(){
   var pictures = $('#slider').children('li');
@@ -124,7 +111,7 @@ Navigation = function(){
     $(navItems).removeClass('active');
     $('#navigation li').eq(i).addClass('active');
     pictures.fadeOut(400).eq(i).fadeIn(400);
-  }; // End `goTo` function
+  };
 
   $('#navigation li').on('click', function(){
     var index = $(this).index();
@@ -149,4 +136,4 @@ Navigation = function(){
     }
   });
   goTo(0);
-}; // End `Navigation` function
+};
