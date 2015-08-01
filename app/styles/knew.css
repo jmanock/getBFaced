@@ -104,10 +104,32 @@ nav li a:hover{
 .about h2{
   padding-top:10%;
 }
+.about p{
+  margin-right:1em;
+}
 .profilePic{
   float:left;
   width:30%;
   border-radius:50%;
   border:solid 5px #ffc14f;
   margin:2%;
+}
+.banner{
+  height:12em;
+  background:url(../images/blackNwhite.jpg)fixed;
+  background-size:100%;
+  position:relative;
+  margin-left:-1em;
+  margin-right:-1em;
+  margin-top:5%;
+}
+.resume{
+  background-color:gray;
+  margin-left:-1em;
+  margin-top:-1em;
+  margin-right:-1em;
+}
+.resume p{
+  margin-left:2em;
+  margin-right:2em;
 }
