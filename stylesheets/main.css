@@ -26,13 +26,55 @@ h1{
   text-align:center;
 }
 
+#home, #about, #portfolio, #contact, #footer{
+  display:inline-block;
+  margin:0;
+  padding:0;
+  position:relative;
+  width:100%;
+}
+
 #home{
   background:url(../assets/images/lips.jpg) right bottom no-repeat fixed;
   background-size:cover;
   display:block;
   height:990px;
 }
-#home, #about, #portfolio, #contact, #footer{
+
+#about{
+  background:#f3eff0;
+  color:#282520;
+}
+
+#portfolio{
+  background:#0383a7;
+}
+
+#contact{
+  background:#b41547;
+}
+
+#footer{
+  background:#282520;
+}
+
+.left-border, .right-border{
+  bottom:0;
+  position:absolute;
+  top:0;
+  z-index:10;
+}
+
+.left-border{
+  left:0;
+}
+
+.right-border{
+  right:0;
+}
+
+
+/*#home, #about, #portfolio, #contact, #footer{
   display:inline-block;
   margin:0;
   padding:0;
@@ -57,7 +99,7 @@ h1{
 
 .right-border{
   right:0;
-}
+}*/
 
 #headshot img{
   border-radius:50%;
