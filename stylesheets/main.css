@@ -59,26 +59,14 @@ p{
 }
 
 #about{
-  background:#f3eff0;
+  background:orange;
   color:#282520;
-}
-
-.left-border, .right-border{
-  bottom:0;
-  position:relative;
-  top:0;
-}
-
-.left-border{
-  left:0;
-}
-
-.right-border{
-  right:0;
+  height:auto;
+  width:auto;
 }
 
 .headshot {
-  border-radius:50%;
+  border-radius:70%;
   left:0;
   margin:50px;
   top:0;
