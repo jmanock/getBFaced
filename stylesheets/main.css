@@ -64,22 +64,25 @@ header{
   background-color:#8F232F;
 }
 #about p{
-  float:right;
+
 }
 #portfolio{
   background-color:#9D527B;
-  margin-top:-10px;
+  height:300px;
+}
+div{
+  width:2500px;
+  height:200px;
+}
+img{
+  width:250px;
+  height:200px;
+  display:inline-block;
+  padding:10px;
 }
 #contact{
   background-color:#955C9B;
 }
-li img{
-  width:250px;
-  height:200px;
-}
 li{
   list-style-type:none;
-}
-.photos li{
-  display:inline;
 }
