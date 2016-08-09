@@ -37,8 +37,12 @@ h1{
 #contact{
   background:#0383a7;
 }*/
-body{
+*, html{
   margin:0;
+  padding:0;
+}
+body{
+
 }
 header{
   background-image:url(../assets/images/lips.jpg);
@@ -49,14 +53,25 @@ header{
   color:white;
   text-align:center;
 }
+.headshot{
+  border-radius:50%;
+  left:0;
+  margin:50px;
+  top:0;
+  width:250px;
+}
 #about{
-
+  background-color:#8F232F;
+}
+#about p{
+  float:right;
 }
 #portfolio{
-
+  background-color:#9D527B;
+  margin-top:-10px;
 }
 #contact{
-  background-color:gray;
+  background-color:#955C9B;
 }
 li img{
   width:250px;
