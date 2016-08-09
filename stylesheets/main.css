@@ -37,6 +37,27 @@ h1{
 #contact{
   background:#0383a7;
 }*/
+body{
+  margin:0;
+}
+header{
+  background-image:url(../assets/images/lips.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:100%;
+  background-attachment:fixed;
+  color:white;
+  text-align:center;
+}
+#about{
+
+}
+#portfolio{
+
+}
+#contact{
+  background-color:gray;
+}
 li img{
   width:250px;
   height:200px;
