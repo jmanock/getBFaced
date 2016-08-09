@@ -1,5 +1,9 @@
-body{
+/*body{
   margin:0;
+}
+h1{
+  color:white;
+  text-align:center;
 }
 #home, #about, #contact{
   display:inline-block;
@@ -11,6 +15,7 @@ body{
   background-size:cover;
   display:block;
   height:100%;
+  opacity:.9;
 }
 
 #about{
@@ -31,4 +36,14 @@ body{
 
 #contact{
   background:#0383a7;
+}*/
+li img{
+  width:250px;
+  height:200px;
+}
+li{
+  list-style-type:none;
+}
+.photos li{
+  display:inline;
 }
