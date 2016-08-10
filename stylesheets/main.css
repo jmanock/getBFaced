@@ -1,54 +1,4 @@
-/**, html{
-  margin:0;
-  padding:0;
-}
-body{
-
-}
-header{
-  background-image:url(../assets/images/lips.jpg);
-  background-repeat:no-repeat;
-  background-size:cover;
-  height:100%;
-  background-attachment:fixed;
-  color:#A9FF6F;
-  text-align:center;
-}
-.headshot{
-  border-radius:50%;
-  left:0;
-  margin:50px;
-  top:0;
-  width:250px;
-}
-#about{
-  background-color:#8F232F;
-  background-color:#A9FF6F;
-}
-#about p{
-  float:right;
-}
-#portfolio{
-  background-color:#9D527B;
-  height:300px;
-}
-div{
-  width:2500px;
-  height:200px;
-}
-img{
-  width:150px;
-  height:100px;
-  display:inline-block;
-  padding:10px;
-}
-#contact{
-  background-color:#955C9B;
-}
-li{
-  list-style-type:none;
-}*/
-body{
+/*body{
   background:#f3eff0;
   color:#f3effo;
   font-size:100%;
@@ -120,6 +70,8 @@ p{
 }
 #contact{
   background:#0383a7;
+  border:1em solid orange;
+
 }
 footer{
   background:#282520;
@@ -167,3 +119,6 @@ footer{
 .contact-content a:last-of-type{
   margin-right:0;
 }
+footer{
+  text-align:center;
+}*/
