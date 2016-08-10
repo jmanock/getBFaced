@@ -6,7 +6,7 @@
 </head>
 <body>
   <header id='home'>
-    <h1>Hi, I'm an Brittani. I am a beautitan in Orlando, Fl</h1>
+    <h1>Hi, I'm Brittani. I am a beautitan in Orlando</h1>
   </header>
 
   <section id='about'>
@@ -16,16 +16,19 @@
       <h2>About Me</h2>
       <p>Points - 10+ years experience - specializing in Nails, Make-up, Hair, Special-Effects - Joy of working with every client - make your dreams come true today!</p>
       <div class="portfolio">
-        <img src="assets/images/pic.jpg" alt="">
-        <img src="assets/images/pic2.jpg" alt="">
-        <img src="assets/images/pic3.jpg" alt="">
-        <img src="assets/images/pic4.jpg" alt="">
-        <img src="assets/images/pic5.jpg" alt="">
-        <img src="assets/images/pic6.jpg" alt="">
-        <img src="assets/images/pic7.jpg" alt="">
-        <img src="assets/images/redhead.jpg" alt="">
-        <img src="assets/images/redhead2.jpg" alt="">
-        <img src="assets/images/twitter.jpg" alt="">
+        <img src="assets/images/pic.jpg" alt="" class='slide'>
+        <img src="assets/images/pic2.jpg" alt="" class='slide'>
+        <img src="assets/images/pic3.jpg" alt="" class='slide'>
+        <img src="assets/images/pic4.jpg" alt="" class='slide'>
+        <img src="assets/images/pic5.jpg" alt="" class='slide'>
+        <img src="assets/images/pic6.jpg" alt="" class='slide'>
+        <img src="assets/images/pic7.jpg" alt="" class='slide'>
+        <img src="assets/images/redhead.jpg" alt="" class='slide'>
+        <img src="assets/images/redhead2.jpg" alt="" class='slide'>
+        <img src="assets/images/twitter.jpg" alt="" class='slide'>
+
+        <button class='left' onclick='plusDivs(-1)'> < </button>
+        <button class='right' onclick='plusDivs(1)'> > </button>
       </div>
   </section>
 
@@ -44,5 +47,28 @@
   <footer>
     <h5>GetBritFaced &copy; 2016</h5>
   </footer>
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(x){
+    showDivs(slideIndex += x);
+  }
+
+  function showDivs(x){
+    var i;
+    var n = document.getElementsByClassName('slide');
+    if(x > n.length){
+      slideIndex = 1;
+    }
+    if(x < 1){
+      slideIndex = n.length;
+    }
+    for(i=0; i < n.length; i++){
+      n[i].style.display = 'none';
+    }
+    n[slideIndex - 1].style.display = 'block';
+  }
+  </script>
 </body>
 </html>

@@ -93,18 +93,34 @@ footer{
   width:300px;
 }
 .portfolio{
-
+  width:800px;
+  position:relative;
 }
 .portfolio img{
-  width:300px;
-  height:250px;
+
 }
+.slide{
+  width:75%;
+  height:90%;
+}
+.left, .right{
+  position:absolute;
+  top:50%;
+  font-size:2em;
+}
+.left{
+  left:0;
+}
+.right{
+  right:6.2em;
+}
+
 .about-content{
   display:inline-block;
   margin:0 15em;
 }
 .about-content h2{
-  color:#b41547;
+  color:#50ad0d;
 }
 .contact-content{
   left:400px;
