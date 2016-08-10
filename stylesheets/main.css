@@ -1,4 +1,4 @@
-/*body{
+body{
   background:#f3eff0;
   color:#f3effo;
   font-size:100%;
@@ -70,8 +70,6 @@ p{
 }
 #contact{
   background:#0383a7;
-  border:1em solid orange;
-
 }
 footer{
   background:#282520;
@@ -93,6 +91,13 @@ footer{
   margin:50px;
   top:0;
   width:300px;
+}
+.portfolio{
+
+}
+.portfolio img{
+  width:300px;
+  height:250px;
 }
 .about-content{
   display:inline-block;
@@ -121,4 +126,4 @@ footer{
 }
 footer{
   text-align:center;
-}*/
+}
