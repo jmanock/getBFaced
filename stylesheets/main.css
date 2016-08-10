@@ -98,19 +98,21 @@ p{
   height:75%;
   border-radius:30px;
   margin-left:2em;
-  border:.5em solid #282520;
+  /*border:1em outset #282520;*/
+  /*border:.7em inset orange;*/
 }
 .left, .right{
   position:absolute;
   top:50%;
   font-size:2em;
   cursor:pointer;
+  color:#0383a7;
 }
 .left{
   left:0;
 }
 .right{
-  right:6.2em;
+  right:2.8em;
 }
 .about-content{
   margin:0 15em;
