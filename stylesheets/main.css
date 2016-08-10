@@ -71,9 +71,6 @@ p{
 #contact{
   background:#0383a7;
 }
-footer{
-  background:#282520;
-}
 .left-border, .right-border{
   bottom:0;
   position:absolute;
@@ -96,17 +93,19 @@ footer{
   width:800px;
   position:relative;
 }
-.portfolio img{
-
-}
 .slide{
   width:75%;
-  height:90%;
+  height:75%;
+  border-radius:30px;
+  margin-left:4em;
+  border:.5em solid #282520;
 }
 .left, .right{
   position:absolute;
   top:50%;
   font-size:2em;
+  cursor:pointer;
+  
 }
 .left{
   left:0;
@@ -114,9 +113,7 @@ footer{
 .right{
   right:6.2em;
 }
-
 .about-content{
-  display:inline-block;
   margin:0 15em;
 }
 .about-content h2{
@@ -142,4 +139,66 @@ footer{
 }
 footer{
   text-align:center;
+  background:#282520;
+}
+@media handheld, screen and (max-width:60em){
+  body{
+    font-size:90%;
+  }
+  #contact{
+    margin-top:-4px;
+  }
+  .about-content{
+    margin:0 16em;
+  }
+  .project{
+    float:none;
+    margin:20px 12.5% !important;
+    width:75%;
+  }
+  .project .caption{
+    opacity:0.9;
+  }
+}
+@media handheld, screen and (max-width:53em){
+  .left-border, .right-border{
+    display:none;
+  }
+  .about-content{
+    margin:0 5%;
+    width:90%;
+  }
+  #nav ul li{
+    margin:10px;
+  }
+}
+@media handheld, screen and (max-width:45em){
+  #contact{
+    text-align:center;
+  }
+  footer{
+    text-align:center;
+  }
+  h1{
+    font-size:4.5em;
+    line-height:100%;
+    margin:.3em 5%;
+    width:90%;
+  }
+  .headshot{
+    margin:20px;
+    width:20px;
+  }
+  .project{
+    margin:20px 7.5% !important;
+    width:85%;
+  }
+  .contact-content{
+    left:0;
+    margin:0 5%;
+    margin-bottom:20px;
+    position:relative;
+    right:0;
+    width:90%;
+  }
 }
