@@ -15,7 +15,8 @@ h1,h2,h3,h4,h5,p{
   width:100%;
 }
 h1{
-  color:#0383a7;
+  /*color:#0383a7;*/
+  color:#9d527b;
   font-size:6em;
   line-height:115%;
   margin:0 auto;
@@ -106,7 +107,9 @@ p{
   top:50%;
   font-size:2em;
   cursor:pointer;
-  color:#0383a7;
+  /*color:#0383a7;*/
+  /*color:#9d527b;*/
+  color:gray;
 }
 .left{
   left:0;
@@ -118,7 +121,8 @@ p{
   margin:0 15em;
 }
 .about-content h2{
-  color:#50ad0d;
+  /*color:#50ad0d;*/
+  color:#0383a7;
 }
 .contact-content{
   left:400px;
