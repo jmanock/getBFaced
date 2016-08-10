@@ -18,16 +18,21 @@
       <h2>About Me</h2>
       <p>Points - 10+ years experience - specializing in Nails, Make-up, Hair, Special-Effects - Joy of working with every client - make your dreams come true today!</p>
       <div class="portfolio">
+        <img src="assets/images/twitter.jpg" alt="" class='slide'>
         <img src="assets/images/pic.jpg" alt="" class='slide'>
         <img src="assets/images/pic2.jpg" alt="" class='slide'>
-        <img src="assets/images/pic3.jpg" alt="" class='slide'>
         <img src="assets/images/pic4.jpg" alt="" class='slide'>
-        <img src="assets/images/pic5.jpg" alt="" class='slide'>
         <img src="assets/images/pic6.jpg" alt="" class='slide'>
         <img src="assets/images/pic7.jpg" alt="" class='slide'>
-        <img src="assets/images/redhead.jpg" alt="" class='slide'>
         <img src="assets/images/redhead2.jpg" alt="" class='slide'>
-        <img src="assets/images/twitter.jpg" alt="" class='slide'>
+        <img src="assets/images/pix.jpg" alt="" class='slide'>
+        <img src="assets/images/pix1.jpg" alt="" class='slide'>
+        <img src="assets/images/pix3.jpg" alt="" class='slide'>
+        <img src="assets/images/pix4.jpg" alt="" class='slide'>
+        <img src="assets/images/pix5.jpg" alt="" class='slide'>
+        <img src="assets/images/pix6.jpg" alt="" class='slide'>
+        <img src="assets/images/pix7.jpg" alt="" class='slide'>
+        <img src="assets/images/pix8.jpg" alt="" class='slide'>
 
         <span class='left fa fa-chevron-left fa-3x' onclick='plusDivs(-1)'></span>
         <span class='right fa fa-chevron-right fa-3x' onclick='plusDivs(1)'></span>
@@ -49,28 +54,6 @@
   <footer>
     <h5>GetBritFaced &copy; 2016</h5>
   </footer>
-  <script>
-  var slideIndex = 1;
-  showDivs(slideIndex);
-
-  function plusDivs(x){
-    showDivs(slideIndex += x);
-  }
-
-  function showDivs(x){
-    var i;
-    var n = document.getElementsByClassName('slide');
-    if(x > n.length){
-      slideIndex = 1;
-    }
-    if(x < 1){
-      slideIndex = n.length;
-    }
-    for(i=0; i < n.length; i++){
-      n[i].style.display = 'none';
-    }
-    n[slideIndex - 1].style.display = 'block';
-  }
-  </script>
+  <script src='assets/scripts/main.js'></script>
 </body>
 </html>
