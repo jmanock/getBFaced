@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script|Raleway|Pacifico);
 body{
   background:#f3eff0;
   color:#f3effo;
@@ -15,14 +16,16 @@ h1,h2,h3,h4,h5,p{
   width:100%;
 }
 h1{
-  /*color:#0383a7;*/
-  color:#9d527b;
+  color:#0383a7;
+  /*color:#9d527b;*/
+  font-family:'Pacifico', 'cursive';
   font-size:6em;
   line-height:115%;
   margin:0 auto;
   max-width:8.5em;
   text-align:center;
   text-shadow:2px 2px 0 #282520;
+  padding-top:2em;
 }
 h2{
   font-size:4em;
@@ -46,9 +49,6 @@ p{
   font-size:1.5em;
   line-height:120%;
 }
-#about a, #portfolio a{
-  color:#1dc4f3;
-}
 #contact a, footer a{
   color:#f3eff0;
 }
@@ -68,9 +68,11 @@ p{
 #about{
   background:#f3eff0;
   color:#282520;
+  font-family:'Raleway', sans-serif;
 }
 #contact{
   background:#0383a7;
+  font-family:'Raleway', sans-serif;
 }
 .left-border, .right-border{
   bottom:0;
@@ -122,7 +124,9 @@ p{
 }
 .about-content h2{
   /*color:#50ad0d;*/
-  color:#0383a7;
+  /*color:#0383a7;*/
+  color:#9d527b;
+  font-family:'Kaushan Script', cursive;
 }
 .contact-content{
   left:400px;
@@ -131,6 +135,7 @@ p{
   right:50px;
   text-align:center;
   top:0;
+
 }
 .contact-content a{
   display:inline-block;
