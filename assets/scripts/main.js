@@ -17,7 +17,7 @@ function showDivs(x){
   for(i=0; i < n.length; i++){
     n[i].style.display = 'none';
   }
-  
+  console.log(slideIndex);
   n[slideIndex - 1].style.display = 'block';
 }
 // So I do have the numbers of the photos
