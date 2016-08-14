@@ -95,12 +95,11 @@ p{
 .portfolio{
   width:800px;
   position:relative;
-}
-.portfolio{
   display:block;
   position:relative;
   overflow:hidden;
 }
+
 figcaption{
   position:absolute;
   background:rgba(0,0,0,0.75);
@@ -108,7 +107,7 @@ figcaption{
   padding:10px 20px;
   opacity:0;
   bottom:0;
-  left:-20%;
+  left:-10%;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
   -o-transition: all 0.6s ease;
@@ -210,15 +209,24 @@ footer{
   h2{
     font-size:3em;
   }
-  .left-border, .right-border, .left, .right{
+  .left-border, .right-border{
     display:none !important;
   }
   .slide{
-
+    height:50%;
+    width:50%;
+    margin:0;
   }
-  #about{
-    /*background-color:#282520;*/
-
+  .left{
+    left:0;
+    color:white;
+  }
+  .right{
+    right:8.5em;
+    color:white;
+  }
+  figcaption{
+    left:5em !important;
   }
   .about-content{
     margin:0;
