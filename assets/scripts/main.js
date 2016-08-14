@@ -7,19 +7,20 @@ function plusDivs(x){
 
 function showDivs(x){
   var i;
-  var n = document.getElementsByClassName('slide');
-  if(x > n.length){
+  var slide = document.getElementsByClassName('slide');
+  var text = document.getElementsByTagName('figcaption');
+  if(x > slide.length){
     slideIndex = 1;
   }
   if(x < 1){
-    slideIndex = n.length;
+    slideIndex = slide.length;
   }
-  for(i=0; i < n.length; i++){
-    n[i].style.display = 'none';
+  for(i = 0; i < slide.length && i < text.length; i++){
+    slide[i].style.display = 'none';
+    text[i].style.display='none';
   }
-  console.log(slideIndex);
-  n[slideIndex - 1].style.display = 'block';
+
+  slide[slideIndex - 1].style.display = 'block';
+  text[slideIndex - 1].style.display='';
 }
-// So I do have the numbers of the photos
-// Need to add a caption or atleast a trigger to them
-// Maybe just number the photos
+// Need to only show figcaption to the photo
