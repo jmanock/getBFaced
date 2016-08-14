@@ -214,6 +214,29 @@ footer{
     display:none !important;
   }
   .slide{
-    
+
+  }
+  #about{
+
+  }
+  .headshot{
+    width:150px;
+    position:static;
+    padding:0;
+    margin:0;
+    margin-left:10em;
+  }
+  .contact-content{
+    font-size:.6em;
+    position:static;
+    padding:0;
+    margin:0;
+  }
+  .contact-content a{
+    margin-bottom:2em;
+  }
+  .contact-content h4{
+
+
   }
 }
