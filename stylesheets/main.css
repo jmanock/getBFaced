@@ -17,7 +17,6 @@ h1,h2,h3,h4,h5,p{
 }
 h1{
   color:#0383a7;
-  /*color:#9d527b;*/
   font-family:'Pacifico', 'cursive';
   font-size:6em;
   line-height:115%;
@@ -141,16 +140,12 @@ figcaption{
   height:75%;
   border-radius:30px;
   margin-left:2em;
-  /*border:1em outset #282520;*/
-  /*border:.7em inset orange;*/
 }
 .left, .right{
   position:absolute;
   top:50%;
   font-size:2em;
   cursor:pointer;
-  /*color:#0383a7;*/
-  /*color:#9d527b;*/
   color:gray;
 }
 .left{
@@ -163,8 +158,6 @@ figcaption{
   margin:0 15em;
 }
 .about-content h2{
-  /*color:#50ad0d;*/
-  /*color:#0383a7;*/
   color:#9d527b;
   font-family:'Kaushan Script', cursive;
 }
@@ -195,9 +188,7 @@ footer{
   text-align:center;
   background:#282520;
 }
-@media screen and(max-width:1024px){
 
-}
 @media screen and (max-width:1094px){
   .left-border, .right-border{
     display:none !important;
