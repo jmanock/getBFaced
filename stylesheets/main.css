@@ -217,7 +217,14 @@ footer{
 
   }
   #about{
+    /*background-color:#282520;*/
 
+  }
+  .about-content{
+    margin:0;
+    padding-right:1em;
+    padding-left:1em;
+    font-size:1em;
   }
   .headshot{
     width:150px;
@@ -225,6 +232,7 @@ footer{
     padding:0;
     margin:0;
     margin-left:10em;
+    margin-top:2em;
   }
   .contact-content{
     font-size:.6em;
@@ -234,9 +242,5 @@ footer{
   }
   .contact-content a{
     margin-bottom:2em;
-  }
-  .contact-content h4{
-
-
   }
 }
