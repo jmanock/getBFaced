@@ -22,3 +22,4 @@ function showDivs(x){
 }
 // So I do have the numbers of the photos
 // Need to add a caption or atleast a trigger to them
+// Maybe just number the photos
