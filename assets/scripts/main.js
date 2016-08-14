@@ -23,4 +23,3 @@ function showDivs(x){
   slide[slideIndex - 1].style.display = 'block';
   text[slideIndex - 1].style.display='';
 }
-// Need to only show figcaption to the photo

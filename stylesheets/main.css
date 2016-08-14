@@ -96,6 +96,47 @@ p{
   width:800px;
   position:relative;
 }
+.portfolio{
+  display:block;
+  position:relative;
+  overflow:hidden;
+}
+figcaption{
+  position:absolute;
+  background:rgba(0,0,0,0.75);
+  color:white;
+  padding:10px 20px;
+  opacity:0;
+  bottom:0;
+  left:-20%;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+.portfolio:hover figcaption{
+  opacity:1;
+  left:10em;
+}
+.portfolio:before{
+  content:'?';
+  position:absolute;
+  background:rgba(255,255,255,0.75);
+  color:black;
+  width:24px;
+  height:24px;
+  -webkit-border-radius:12px;
+  -moz-border-radius:12px;
+  border-radius:12px;
+  text-align:center;
+  font-size:1.5em;
+  line-height:24px;
+  left:2em;
+  bottom:0;
+}
+.portfolio:hover:before{
+  opacity:0;
+}
+
 .slide{
   width:75%;
   height:75%;
@@ -155,104 +196,266 @@ footer{
   text-align:center;
   background:#282520;
 }
-@media handheld, screen and (max-width:60em){
-  body{
-    font-size:90%;
+@media screen and(max-width:1024px){
+  #home, #about, #contact, footer{
+    display:inline-block;
+    margin:0;
+    padding:0;
+    position:relative;
+    width:100%;
+  }
+  #home{
+    background:url(../assets/images/lips.jpg) right bottom no-repeat fixed;
+    background-size:cover;
+    display:block;
+    height:900px;
+  }
+  #about{
+    background:#f3eff0;
+    color:#282520;
+    font-family:'Raleway', sans-serif;
   }
   #contact{
-    margin-top:-4px;
+    background:#0383a7;
+    font-family:'Raleway', sans-serif;
+  }
+  .left-border, .right-border{
+    bottom:0;
+    position:absolute;
+    top:0;
+  }
+  .left-border{
+    left:0;
+  }
+  .right-border{
+    right:0;
+  }
+  .headshot{
+    border-radius:300px;
+    left:0;
+    margin:50px;
+    top:0;
+    width:300px;
+  }
+  .portfolio{
+    width:800px;
+    position:relative;
+  }
+  .portfolio{
+    display:block;
+    position:relative;
+    overflow:hidden;
+  }
+  figcaption{
+    position:absolute;
+    background:rgba(0,0,0,0.75);
+    color:white;
+    padding:10px 20px;
+    opacity:0;
+    bottom:0;
+    left:-20%;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+  }
+  .portfolio:hover figcaption{
+    opacity:1;
+    left:10em;
+  }
+  .portfolio:before{
+    content:'?';
+    position:absolute;
+    background:rgba(255,255,255,0.75);
+    color:black;
+    width:24px;
+    height:24px;
+    -webkit-border-radius:12px;
+    -moz-border-radius:12px;
+    border-radius:12px;
+    text-align:center;
+    font-size:1.5em;
+    line-height:24px;
+    left:2em;
+    bottom:0;
+  }
+  .portfolio:hover:before{
+    opacity:0;
+  }
+
+  .slide{
+    width:75%;
+    height:75%;
+    border-radius:30px;
+    margin-left:2em;
+    /*border:1em outset #282520;*/
+    /*border:.7em inset orange;*/
+  }
+  .left, .right{
+    position:absolute;
+    top:50%;
+    font-size:2em;
+    cursor:pointer;
+    /*color:#0383a7;*/
+    /*color:#9d527b;*/
+    color:gray;
+  }
+  .left{
+    left:0;
+  }
+  .right{
+    right:2.8em;
   }
   .about-content{
-    margin:0 16em;
+    margin:0 15em;
   }
-  .protfolio{
-    float:none;
-    margin:20px 12.5% !important;
-    width:75%;
-  }
-  .project .caption{
-    opacity:0.9;
+  .about-content h2{
+    /*color:#50ad0d;*/
+    /*color:#0383a7;*/
+    color:#9d527b;
+    font-family:'Kaushan Script', cursive;
   }
 }
-@media handheld, screen and (max-width:53em){
+@media screen and (max-width:768px){
+  h1{
+    font-size:4em;
+  }
+  h2{
+    font-size:3em;
+  }
+  h3{
+    font-size:1.8em;
+  }
+  h4{
+    font-size:2.0em;
+    margin-bottom:1em;
+  }
+  h5{
+    font-size:.7em;
+    padding:.5em;
+    width:auto;
+  }
+  p{
+    font-size:1.5em;
+    line-height:120%;
+  }
+  #contact a, footer a{
+    color:#f3eff0;
+  }
+  #home, #about, #contact, footer{
+    display:inline-block;
+    margin:0;
+    padding:0;
+    position:relative;
+    width:100%;
+  }
+  #home{
+    background:url(../assets/images/lips.jpg) right bottom no-repeat fixed;
+    background-size:cover;
+    display:block;
+    height:900px;
+  }
+  #about{
+    background:#f3eff0;
+    color:#282520;
+    font-family:'Raleway', sans-serif;
+  }
+  #contact{
+    background:#0383a7;
+    font-family:'Raleway', sans-serif;
+  }
   .left-border, .right-border{
     display:none;
   }
-  .about-content{
-    margin:0 5%;
-    width:90%;
-  }
-  #nav ul li{
-    margin:10px;
-  }
-}
-@media handheld, screen and (max-width:45em){
-  #contact{
-    text-align:center;
-  }
-  footer{
-    text-align:center;
-  }
-  h1{
-    font-size:4.5em;
-    line-height:100%;
-    margin:.3em 5%;
-    width:90%;
-  }
   .headshot{
-    margin:20px;
-    width:20px;
+    border-radius:300px;
+    left:0;
+    margin:50px;
+    top:0;
+    width:300px;
   }
-  .project{
-    margin:20px 7.5% !important;
-    width:85%;
+  .portfolio{
+    width:800px;
+    position:relative;
+  }
+  .portfolio{
+    display:block;
+    position:relative;
+    overflow:hidden;
+  }
+  figcaption{
+    position:absolute;
+    background:rgba(0,0,0,0.75);
+    color:white;
+    padding:10px 20px;
+    opacity:0;
+    bottom:0;
+    left:-20%;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+  }
+  .portfolio:hover figcaption{
+    opacity:1;
+    left:10em;
+  }
+  .portfolio:before{
+    content:'?';
+    position:absolute;
+    background:rgba(255,255,255,0.75);
+    color:black;
+    width:24px;
+    height:24px;
+    -webkit-border-radius:12px;
+    -moz-border-radius:12px;
+    border-radius:12px;
+    text-align:center;
+    font-size:1.5em;
+    line-height:24px;
+    left:2em;
+    bottom:0;
+  }
+  .portfolio:hover:before{
+    opacity:0;
+  }
+
+  .slide{
+    width:75%;
+    height:75%;
+    border-radius:30px;
+    margin-left:2em;
+    /*border:1em outset #282520;*/
+    /*border:.7em inset orange;*/
+  }
+  .left, .right{
+    position:absolute;
+    top:50%;
+    font-size:2em;
+    cursor:pointer;
+    /*color:#0383a7;*/
+    /*color:#9d527b;*/
+    color:gray;
+  }
+  .left{
+    left:0;
+  }
+  .right{
+    right:2.8em;
+  }
+  .about-content{
+    margin:0;
+    text-align:center;
+  }
+  .about-content h2{
+    color:#9d527b;
+    font-family:'Kaushan Script', cursive;
   }
   .contact-content{
-    left:0;
-    margin:0 5%;
-    margin-bottom:20px;
-    position:relative;
-    right:0;
-    width:90%;
+    left:400px;
+    margin:75px 0;
+    position:absolute;
+    right:50px;
+    text-align:center;
+    top:0;
+
   }
-}
-.portfolio{
-  display:block;
-  position:relative;
-  overflow:hidden;
-}
-figcaption{
-  position:absolute;
-  background:rgba(0,0,0,0.75);
-  color:white;
-  padding:10px 20px;
-  opacity:0;
-  bottom:0;
-  left:-30%;
-  -webkit-transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
-}
-.portfolio:hover figcaption{
-  opacity:1;
-  left:0;
-}
-.portfolio:before{
-  content:'?';
-  position:absolute;
-  background:rgba(255,255,255,0.75);
-  color:black;
-  width:24px;
-  height:24px;
-  -webkit-border-radius:12px;
-  -moz-border-radius:12px;
-  border-radius:12px;
-  text-align:center;
-  font-size:1.5em;
-  line-height:24px;
-  left:0;
-  bottom:0;
-}
-.portfolio:hover:before{
-  opacity:0;
 }
