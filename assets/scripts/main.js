@@ -23,3 +23,8 @@ function showDivs(x){
   slide[slideIndex - 1].style.display = 'block';
   text[slideIndex - 1].style.display='';
 }
+/* TODO
+  * Media queries redo
+  * Update js page with comments and better var names
+  * Add more pics and awards
+*/
